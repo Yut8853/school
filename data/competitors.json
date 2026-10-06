@@ -1,0 +1,33 @@
+{
+  "checked_on": "2026-10-04",
+  "note": "比較表（TOP）の元データ。サイトには匿名（A社・B社・C社）で表示する。公開前と毎月1回、公式ページで確認し、取得した画面のスクリーンショットを保存すること。",
+  "competitors": [
+    {
+      "label": "A社",
+      "name": "デイトラ",
+      "course": "Web制作コース",
+      "price": "89,800円（税込・買い切り）",
+      "period": "質問サポート1年間（教材は無期限で閲覧可）",
+      "source": "https://daily-trial.com/web_site/",
+      "status": "要再確認：2026-10-04に当方の取得では89,800円、外部の評価では129,800円と表示。公開日にブラウザで確認し、スクリーンショットを保存して確定する"
+    },
+    {
+      "label": "B社",
+      "name": "NOT DESIGN SCHOOL",
+      "course": "パーソナライズコース",
+      "price": "月額33,000円〜（推奨6ヶ月〜）",
+      "period": "月額更新",
+      "source": "https://notdesignschool.jp/course/personalized-course",
+      "status": "確認済み"
+    },
+    {
+      "label": "C社",
+      "name": "インターネット・アカデミー",
+      "course": "Webデザイナーコース",
+      "price": "481,448円（税込）",
+      "period": "受講期間の目安3〜4ヶ月・授業24回",
+      "source": "https://www.internetacademy.jp/course/design/designer.html",
+      "status": "確認済み（2026-10-01申込分から価格改定）"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>無料サンプルレッスン：CMS：更新しやすい設計｜Web制作スクール「0→1」</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Web制作スクール「0→1」の授業を、課題・提出例・講師のレビュー・修正版・合格基準まで、1レッスン丸ごと公開します。" name="description"/>
+<link href="https://example.com/lesson-cms.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="0→1 Web制作スクール" property="og:site_name"/>
+<meta content="無料サンプルレッスン：CMS：更新しやすい設計｜Web制作スクール「0→1」" property="og:title"/>
+<meta content="Web制作スクール「0→1」の授業を、課題・提出例・講師のレビュー・修正版・合格基準まで、1レッスン丸ごと公開します。" property="og:description"/>
+<meta content="https://example.com/lesson-cms.html" property="og:url"/>
+<meta content="https://example.com/ogp.png" property="og:image"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TOP",
+          "item": "https://example.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "サンプルレッスン",
+          "item": "https://example.com/lesson.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..900&amp;family=Geist+Mono:wght@400..600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/lesson.css">
+</head>
+<body>
+<div class="r" id="top" style="--accent: #FF4A1C">
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="hd">
+<div aria-hidden="true" class="prog"></div>
+<div class="w hd-in">
+<a aria-label="0→1 Web制作スクール トップへ" class="logo" href="index.html"><svg aria-hidden="true" class="logo-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 64 28"><ellipse cx="10" cy="14" rx="7" ry="10"></ellipse><path class="a" d="M23 14h17"></path><path class="a" d="M35 8.5 40.5 14 35 19.5"></path><path d="M50 8.5 55 5v18"></path><path d="M50.5 23h9"></path></svg><span class="logo-name">Web制作スクール<small>From Zero to Production</small></span></a>
+<nav aria-label="メインナビゲーション" class="nav">
+<ul>
+<li><a href="curriculum.html">カリキュラム</a></li>
+<li><a href="works.html">作れるもの</a></li>
+<li><a href="capstone.html">卒業制作</a></li>
+<li><a href="instructor.html">講師</a></li>
+<li><a href="price.html">受講料</a></li>
+</ul>
+</nav>
+<a class="btn btn-sm" href="apply.html"><span class="btn-t">面談・お申し込み</span><span class="btn-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></a>
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="pg-h" class="lg-head">
+<div aria-hidden="true" class="glow g1"></div>
+<div class="w">
+<nav aria-label="パンくずリスト" class="bc"><ol><li><a href="index.html">TOP</a></li><li aria-current="page">サンプルレッスン 07</li></ol></nav>
+<span class="lbl">Sample lesson</span>
+<h1 id="pg-h"><span class="nb">無料サンプルレッスン：</span><br/><span class="nb">CMS：更新しやすい設計</span></h1>
+<p>ページを作るだけでなく、運用担当者が壊さず更新できる情報構造と入力項目を設計します。</p>
+</div>
+</section>
+<div class="w"><div class="lg" style="max-width: 1040px">
+<div class="ls-sec"><h2>1. このレッスンのゴール</h2><p>見た目から逆算するのではなく、更新データの単位を設計できること。</p></div>
+<div class="ls-sec"><h2>2. 課題</h2><p>「お知らせ」をタイトル・日付・カテゴリ・本文・サムネイルで更新できるCMS構成にしてください。</p></div>
+<div class="ls-sec"><h2>3. 提出例（初稿）</h2><div class="ls-code"><pre class="code">本文エディタに日付・カテゴリ・画像も全部手入力</pre></div></div>
+<div class="ls-sec"><h2>4. 講師のレビュー</h2><ol class="rv-l"><li><div><b>更新者にHTMLを書かせない</b>更新する人がHTMLを書く設計だと、いつか表示が崩れます。入力欄に値を入れるだけで正しく表示される形にしましょう。</div></li><li><div><b>並び替えや絞り込みに使う値はフィールド化する</b>日付やカテゴリを本文に書いてしまうと、新しい順に並べたり、種類で絞り込んだりできません。使う値は、それぞれ別の項目にします。</div></li><li><div><b>入力ルールを管理画面側で分かるようにする</b>「画像は横長で」「タイトルは30文字以内」などのルールは、入力欄の説明として管理画面に書いておくと、引き継いでも守られます。</div></li></ol></div>
+<div class="ls-sec"><h2>5. 修正版</h2><div class="ls-code"><pre class="code">title / publish_date / category / body / thumbnail をフィールド化
+一覧と詳細テンプレートで共通利用</pre></div></div>
+<div class="ls-sec"><h2>6. 合格基準</h2><ul class="chk"><li><span aria-hidden="true" class="ok">✓</span>更新者がHTMLなしで登録できる</li><li><span aria-hidden="true" class="ok">✓</span>一覧と詳細で同じデータを再利用できる</li><li><span aria-hidden="true" class="ok">✓</span>必須項目が定義されている</li><li><span aria-hidden="true" class="ok">✓</span>画像の代替テキスト入力方針がある</li></ul><p class="tc-note">※実際の受講では、提出した課題に講師がレビューを返し、合格基準を満たすまで修正します。ここで紹介している内容はサンプルです。</p></div><nav aria-label="レッスンの前後" class="ls-pn"><a class="prev" href="lesson-a11y.html"><span>← 前のレッスン</span><b>アクセシビリティ：操作とコントラスト</b></a><a class="next" href="lesson-seo.html"><span>次のレッスン →</span><b>SEO：検索意図とページ設計</b></a></nav>
+</div></div>
+<section aria-labelledby="lesson-lib-h" class="lesson-library"><div class="w"><div class="lesson-lib-head"><span class="lbl">11 sample lessons</span><h2 class="h2" id="lesson-lib-h">無料で読める、<br/><span class="gt">11のサンプル。</span></h2><p>実際の受講と同じように、課題 → レビュー → 修正 → 合格基準まで公開しています。</p></div><div class="lesson-grid"><a class="lesson-card" href="lesson.html"><span>01</span><small>HTML / Accessibility</small><b>Semantic HTML</b><p>見た目ではなく「意味」でHTMLを書き、読み上げ・検索・保守に強いマークアップへ直します。</p></a><a class="lesson-card" href="lesson-responsive.html"><span>02</span><small>CSS</small><b>レスポンシブCSS</b><p>固定幅で崩れるカードを、clamp・grid・container queryを使って小さい画面でも破綻しない設計へ直します。</p></a><a class="lesson-card" href="lesson-design.html"><span>03</span><small>Direction / UX</small><b>情報設計とワイヤーフレーム</b><p>装飾を始める前に、ユーザーが知りたい順番と事業側の目的を整理してワイヤーに落とします。</p></a><a class="lesson-card" href="lesson-ui.html"><span>04</span><small>UI Design</small><b>UIデザインレビュー</b><p>色や装飾より先に、優先順位・余白・タイポグラフィで読みやすい画面へ修正します。</p></a><a class="lesson-card" href="lesson-javascript.html"><span>05</span><small>JavaScript</small><b>JavaScript：フォームUI</b><p>クリックで動けば終わりではなく、入力状態・エラー・キーボード操作まで含めてフォームを作ります。</p></a><a class="lesson-card" href="lesson-a11y.html"><span>06</span><small>Accessibility</small><b>アクセシビリティ：操作とコントラスト</b><p>自動チェックだけに頼らず、キーボード・フォーカス・コントラストを実際に確認します。</p></a><a aria-current="page" class="lesson-card is-current" href="lesson-cms.html"><span>07</span><small>WordPress / CMS</small><b>CMS：更新しやすい設計</b><p>ページを作るだけでなく、運用担当者が壊さず更新できる情報構造と入力項目を設計します。</p></a><a class="lesson-card" href="lesson-seo.html"><span>08</span><small>SEO</small><b>SEO：検索意図とページ設計</b><p>キーワードを詰め込むのではなく、検索する人の疑問とページの役割を合わせます。</p></a><a class="lesson-card" href="lesson-qa.html"><span>09</span><small>QA / Testing</small><b>QA：公開前テスト</b><p>自分の端末で見えたからOKではなく、正常系・異常系・実機・速度をチェックリスト化します。</p></a><a class="lesson-card" href="lesson-deploy.html"><span>10</span><small>Deploy / Operation</small><b>公開・運用：リリース設計</b><p>ファイルをアップして終わりではなく、公開前確認・切り戻し・監視までを一つのリリースとして設計します。</p></a><a class="lesson-card" href="lesson-hearing.html"><span>11</span><small>Direction / Client Work</small><b>ヒアリングと要件定義</b><p>「何を作りたいですか？」だけで終わらず、背景・課題・優先順位・制約を聞き、制作要件に変換します。</p></a></div></div></section>
+<section aria-labelledby="fin-h" class="fin3">
+<div aria-hidden="true" class="stars"></div><div aria-hidden="true" class="glow g4"></div>
+<span class="spk w2" style="left: 12%; top: 22%; --s: 16px; --d: .4s"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 0C12.7 6.3 17.7 11.3 24 12 17.7 12.7 12.7 17.7 12 24 11.3 17.7 6.3 12.7 0 12 6.3 11.3 11.3 6.3 12 0Z"></path></svg></span><span class="spk" style="right: 14%; top: 18%; --s: 22px; --d: 1s"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 0C12.7 6.3 17.7 11.3 24 12 17.7 12.7 12.7 17.7 12 24 11.3 17.7 6.3 12.7 0 12 6.3 11.3 11.3 6.3 12 0Z"></path></svg></span><span class="spk w2" style="right: 26%; bottom: 24%; --s: 12px; --d: 2.4s"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 0C12.7 6.3 17.7 11.3 24 12 17.7 12.7 12.7 17.7 12 24 11.3 17.7 6.3 12.7 0 12 6.3 11.3 11.3 6.3 12 0Z"></path></svg></span><span class="spk" style="left: 26%; bottom: 20%; --s: 10px; --d: 1.7s"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 0C12.7 6.3 17.7 11.3 24 12 17.7 12.7 12.7 17.7 12 24 11.3 17.7 6.3 12.7 0 12 6.3 11.3 11.3 6.3 12 0Z"></path></svg></span>
+<div class="w">
+<span class="lbl">Next</span>
+<h2 class="jh" id="fin-h">まずは面談だけでも、お気軽にどうぞ。</h2>
+<p class="fin-p">毎月<wbr/>2名限定。<wbr/>受講期限は、<wbr/>卒業基準を<wbr/>満たすまで。</p>
+<div class="kv-cta" style="justify-content: center"><a class="btn btn-lg" href="apply.html"><span class="btn-t">面談予約・お申し込み</span><span class="btn-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></a></div>
+<div><p class="intake"><span class="dot"></span>[11月]<wbr/>入学：受付中</p></div>
+</div>
+</section>
+</main>
+<footer class="ft2">
+<div class="w">
+<div class="ft2-top">
+<div><p class="ft2-k"><span class="idx">1.00</span>Apply</p><p class="ft2-h">受講のお申し込み・面談のご予約はこちら。</p><a class="btn btn-lg" href="apply.html"><span class="btn-t">面談予約・お申し込み</span><span class="btn-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></a></div>
+<nav aria-label="フッターナビゲーション" class="ft2-nav"><div class="ft2-col"><p>School</p><ul><li><a href="index.html">TOP</a></li><li><a href="curriculum.html">カリキュラム</a></li><li><a href="works.html">作れるもの</a></li><li><a href="capstone.html">卒業制作</a></li><li><a href="case.html">卒業制作サンプル</a></li><li><a href="instructor.html">講師紹介</a></li><li><a href="lesson.html">サンプルレッスン</a></li><li><a href="quality.html">この<wbr/>サイトの<wbr/>品質</a></li></ul></div><div class="ft2-col"><p>Apply</p><ul><li><a href="price.html">受講料</a></li><li><a href="apply.html">お申し込み・面談予約</a></li></ul></div><div class="ft2-col"><p>Information</p><ul><li><a href="company.html">運営者情報</a></li><li><a href="tokushoho.html">特定商取引法に<wbr/>基づく<wbr/>表記</a></li><li><a href="privacy.html">プライバシーポリシー</a></li><li><a href="terms.html">利用規約</a></li></ul></div></nav>
+</div>
+<p aria-hidden="true" class="ft2-word"><span>Zero</span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><span>Production</span></p>
+<div class="ft2-bot"><span>ホームページ制作・Web制作スクール<wbr/>「0→1」</span><span>© 2026 JUNKBRANDING</span></div>
+</div>
+</footer>
+</div>
+</body>
+</html>
