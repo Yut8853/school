@@ -116,3 +116,9 @@
   .r section[aria-labelledby="ins-h"] .ins{grid-template-columns:minmax(0,1fr);}
  .r section[aria-labelledby="ins-h"] .ins-photo{width:180px;}
 }
+
+/* Large footer wordmark, sized to the available width on every page. */
+.r .ft2>.w{container-type:inline-size;}
+.r .ft2 .ft2-word{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:.06em;width:100%;font-size:clamp(30px,12cqw,160px);font-weight:700;line-height:1;letter-spacing:-.06em;white-space:nowrap;word-break:normal;overflow-wrap:normal;}
+.r .ft2 .ft2-word>span{flex:none;white-space:nowrap;}
+.r .ft2 .ft2-word>svg{flex:0 0 .72em;width:.72em;height:.72em;}
