@@ -65,3 +65,46 @@
   letter-spacing: .01em;
 }
 .r h1:is(#pg-h, #kv-h) .award-name { font-size: inherit; }
+
+/* Explicit editorial line breaks and equal-height card groups. */
+.r .heading-line{display:block;max-width:100%;text-wrap:nowrap;white-space:nowrap;}
+.r .single-line{white-space:nowrap;text-wrap:nowrap;}
+.r .hon-portrait img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:72% center;border-radius:28px;}
+.r .ins-photo img{object-position:72% center;}
+.r .out-g{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;}
+.r .oc{container-type:inline-size;height:100%;}
+.r .oc-t{font-size:clamp(15px,4.25cqw,24px);}
+.r .oc-img{flex:none;}
+.r #out-h{font-size:clamp(24px,3.5vw,48px);}
+.r .wk-grid{grid-auto-rows:1fr;align-items:stretch;}
+.r .wk{display:flex;flex-direction:column;height:100%;}
+.r .wk>.phi{flex:none;}
+.r .wk-b{display:flex;flex-direction:column;flex:1;}
+.r .wk-rel{margin-top:auto;padding-top:20px;}
+.r .wk .items{margin-bottom:20px;}
+.r .pf-g{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;}
+.r .pf{aspect-ratio:auto;display:flex;flex-direction:column;}
+.r .pf>.il{aspect-ratio:16/9;min-height:0;}
+.r .pf-b{position:relative;flex:1;padding:24px;background:var(--dark);}
+.r .pf-r{font-size:clamp(18px,2vw,22px);text-wrap:nowrap;}
+.r .pf-t{text-wrap:pretty;word-break:normal;}
+.r .award-reasons{grid-auto-rows:1fr;}
+.r .award-reasons .why{container-type:inline-size;}
+.r .award-reasons h3{font-size:clamp(14px,5cqw,21px);min-height:3em;}
+.r .capstone-title{white-space:normal;}
+.r .capstone-title .award-heading-line{font-size:min(1em,6.1vw);}
+.r :is(#pc-h,#gn-h,#why-h){font-size:clamp(20px,3.2vw,44px);}
+.r #fin-h:has(.heading-line){font-size:clamp(23px,3.5vw,48px);}
+@media(max-width:700px){
+ .r .out-g,.r .pf-g{grid-template-columns:minmax(0,1fr);}
+ .r .award-reasons .why{padding:26px 20px;}
+ .r .award-reasons h3{font-size:clamp(13px,5.2cqw,21px);}
+ .r :is(#pc-h,#gn-h,#why-h){font-size:clamp(19px,5.7vw,36px);}
+}
+.r .phrase{display:inline-block;max-width:100%;white-space:nowrap;}
+.r .mini-b-bar .mini-b-url{width:auto;height:auto;flex:1;min-width:0;margin-left:8px;padding:2px 8px;line-height:1.5;}
+.r .pf-t{text-wrap:initial;}
+.r .wk>.phi{height:auto;aspect-ratio:16/10;width:100%;}
+.r .c38 .fin{padding:0;margin:0;min-height:0;}
+.r .c38-cap .fin{background:none;}
+.r .wk.feat{grid-column:auto;}
