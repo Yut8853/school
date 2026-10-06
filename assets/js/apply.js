@@ -39,17 +39,72 @@
     var d = new Date(k.slice(0, 10) + 'T00:00:00'), h = parseInt(k.slice(11, 13), 10);
     return (d.getMonth() + 1) + '月' + d.getDate() + '日（' + WD[d.getDay()] + '） ' + h + ':00〜' + (h + 1) + ':00';
   }
+  function enableDateDrag(box) {
+    if (!box) { return; }
+    var pointer = null, startX = 0, startScroll = 0, dragging = false, suppressClick = false;
+    box.addEventListener('pointerdown', function (e) {
+      suppressClick = false;
+      // Touch scrolling stays native, including vertical page gestures.
+      if (e.pointerType !== 'mouse' || e.button !== 0) { return; }
+      pointer = e.pointerId;
+      startX = e.clientX;
+      startScroll = box.scrollLeft;
+      dragging = false;
+    });
+    box.addEventListener('pointermove', function (e) {
+      if (e.pointerId !== pointer) { return; }
+      var distance = e.clientX - startX;
+      if (!dragging && Math.abs(distance) < 6) { return; }
+      if (!dragging) {
+        dragging = true;
+        suppressClick = true;
+        box.setPointerCapture(pointer);
+        box.classList.add('is-dragging');
+      }
+      e.preventDefault();
+      box.scrollLeft = startScroll - distance;
+    });
+    function finish(e) {
+      if (e.pointerId !== pointer) { return; }
+      var id = pointer;
+      pointer = null;
+      dragging = false;
+      box.classList.remove('is-dragging');
+      if (box.hasPointerCapture(id)) { box.releasePointerCapture(id); }
+    }
+    box.addEventListener('pointerup', finish);
+    box.addEventListener('pointercancel', finish);
+    box.addEventListener('lostpointercapture', finish);
+    box.addEventListener('pointerleave', function (e) {
+      if (!dragging) { finish(e); }
+    });
+    box.addEventListener('click', function (e) {
+      if (suppressClick && e.detail !== 0) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+      }
+      suppressClick = false;
+    }, true);
+    box.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  }
+
   function renderBooking() {
     var dbox = $('#bk-days'), sbox = $('#bk-slots');
     if (!dbox) { return; }
+    var scrollPosition = dbox.scrollLeft;
     dbox.innerHTML = ''; sbox.innerHTML = '';
     days.forEach(function (d) {
       var k = iso(d), b = document.createElement('button');
       b.type = 'button'; b.className = 'bk-d' + (k === state.day ? ' on' : ''); b.setAttribute('aria-pressed', k === state.day ? 'true' : 'false');
       b.innerHTML = '<span class="bk-dw">' + WD[d.getDay()] + '</span><b>' + (d.getMonth() + 1) + '/' + d.getDate() + '</b>';
-      b.addEventListener('click', function () { state.day = k; renderBooking(); });
+      b.addEventListener('click', function () {
+        state.day = k; renderBooking();
+        var selected = dbox.querySelector('.bk-d.on');
+        if (selected) { selected.focus({ preventScroll: true }); }
+      });
       dbox.appendChild(b);
     });
+    dbox.scrollLeft = scrollPosition;
     HOURS.forEach(function (t) {
       var ok = isFree(state.day, t), k = state.day + 'T' + t, h = parseInt(t, 10), b = document.createElement('button');
       b.type = 'button'; b.disabled = !ok; b.className = 'bk-s' + (ok ? '' : ' busy') + (state.slot === k ? ' on' : '');
@@ -165,5 +220,6 @@
       .catch(function () { resetSend(); err.hidden = false; err.focus(); });
   });
 
+  enableDateDrag($('#bk-days'));
   modeView(); renderBooking(); loadSlots();
 })();
