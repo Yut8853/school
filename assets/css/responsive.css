@@ -1,0 +1,67 @@
+/* Text flow and intrinsic sizing shared by desktop and mobile layouts. */
+.r { word-break: normal; overflow-wrap: anywhere; line-break: strict; }
+.r :is(h1, h2, h3, summary, .btn-t, .lesson-card b, .cp-h b, .cp-dl, .pf-r, td, th) {
+  word-break: normal;
+  text-wrap: balance;
+}
+.r small { text-wrap: pretty; }
+.r h1 .nb { display: inline-block; max-width: 100%; }
+.r :where(main, section, article, aside, div, ul, ol, li, details, figure, fieldset),
+.r :where(.lesson-card, .cur h3, .cps-l li > span, .agree > span, .btn-t) { min-width: 0; }
+.r .lesson-card { grid-template-columns: auto minmax(0, 1fr); }
+.r .lesson-card.is-current::after { grid-column: 2; }
+.r .cur h3 { flex-wrap: wrap; }
+.r .btn { max-width: 100%; white-space: normal; }
+.r .pr-per { display: block; }
+
+/* Inline award names must stay in the text flow, not become flex columns. */
+.r .faq summary { display: block; position: relative; padding: 16px 52px; }
+.r .faq summary::before { position: absolute; left: 24px; top: 16px; }
+.r .faq summary::after { position: absolute; right: 24px; top: 25px; }
+.r .faq .a { display: block; position: relative; padding: 0 24px 22px 52px; }
+.r .faq .a::before { position: absolute; left: 24px; top: 0; }
+
+/* Wide comparisons and code stay readable within their own scroll area. */
+.r .art-b:has(> table), .r .table-scroll, .r .code, .r .log { max-width: 100%; overflow-x: auto; }
+.r .table-scroll > table, .r .cmp3 { min-width: 480px; }
+.r :is(.sc-t, .jd-t) .ps { white-space: nowrap; }
+.r .kv-t:not(.cmp3) th { width: 8em; white-space: normal; word-break: keep-all; }
+
+/* The status badge shares .ok with small diagram icons. Reset icon sizing. */
+.r .q-st { width: auto; height: auto; min-width: max-content; }
+.r .q-g li { flex-wrap: wrap; }
+.r .q-g li > div { flex: 1 1 180px; }
+
+@media (max-width: 640px) {
+  .r .lesson-grid { grid-template-columns: minmax(0, 1fr); }
+  .r .fld-l { flex-wrap: wrap; }
+  .r :is(.req, .opt) { flex: none; white-space: nowrap; }
+  .r .bk-meta { flex-basis: 100%; margin-left: 0; }
+  .r .chip2 { max-width: 100%; }
+
+  /* Stacked information tables should not retain desktop intrinsic widths. */
+  .r .lg-t { table-layout: fixed; }
+  .r .lg-t :is(th, td) { overflow-wrap: anywhere; }
+  .r .cr pre { max-width: 100%; overflow-x: auto; }
+
+  .r .mini-b-bar > .live { width: auto; height: auto; flex: none; }
+  .r .mini-b-url { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .r .cph-score { right: 0; }
+  .r .jv-award .aw-k { font-size: clamp(6px, 1.8vw, 10px); letter-spacing: 0; }
+  .r .ph-final .award-name { font-size: min(1em, 6.3vw); }
+
+  .r .faq summary { padding: 16px 44px; }
+  .r .faq summary::before { left: 16px; }
+  .r .faq summary::after { right: 18px; }
+  .r .faq .a { padding-left: 44px; padding-right: 20px; }
+  .r .faq .a::before { left: 16px; }
+}
+
+/* Keep the same h1 scale on every page and preserve explicit heading lines. */
+.r h1:is(#pg-h, #kv-h) {
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: .01em;
+}
+.r h1:is(#pg-h, #kv-h) .award-name { font-size: inherit; }

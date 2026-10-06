@@ -37,8 +37,8 @@ Stripe Checkout（Stripeがホストする決済ページ）で、受講料398,0
 | Field | Current Value | What to Set |
 |-------|--------------|-------------|
 | mode | `payment` | 受講料は一括の支払いなので `payment` のままでよい。継続課金にする場合だけ `subscription` |
-| success_url | `https://example.com/thanks.html?session_id={CHECKOUT_SESSION_ID}` | `CONFIG.SITE_URL` を本番サイトのURLにする。`{CHECKOUT_SESSION_ID}` はそのまま残す |
-| cancel_url | `https://example.com/confirm.html` | `CONFIG.SITE_URL` を本番サイトのURLにする（決済をやめたときに最終確認ページへ戻る） |
+| success_url | `https://school.junkbranding.com/thanks.html?session_id={CHECKOUT_SESSION_ID}` | `CONFIG.SITE_URL` を本番サイトのURLにする。`{CHECKOUT_SESSION_ID}` はそのまま残す |
+| cancel_url | `https://school.junkbranding.com/confirm.html` | `CONFIG.SITE_URL` を本番サイトのURLにする（決済をやめたときに最終確認ページへ戻る） |
 | line_items[].price | `price_1UNUysR5onbGewe4tmLFoOBA`（テスト） | Stripeダッシュボード（https://dashboard.stripe.com/prices）で受講料398,000円（JPY・一括）の価格を作り、その価格ID（`price_` で始まる）を `CONFIG.STRIPE_PRICE_ID` に入れる |
 | data-checkout-endpoint | （空） | `confirm.html` の `<form id="cf-final" … data-checkout-endpoint="">` に、Apps Script のウェブアプリURL（面談予約と同じURL）を入れる |
 

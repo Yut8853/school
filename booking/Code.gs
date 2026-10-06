@@ -22,7 +22,7 @@ const CONFIG = {
   // --- Stripe Checkout（受講料の決済） ---
   // シークレットキーはコードに書かず、「プロジェクトの設定」→「スクリプト プロパティ」に STRIPE_SECRET_KEY として保存する
   STRIPE_PRICE_ID: 'price_1UNUysR5onbGewe4tmLFoOBA', // サンドボックス：HP作成スクール（398,000円）。本番では本番用価格IDに差し替える
-  SITE_URL: 'https://example.com'        // TODO: 本番サイトのURL（末尾の / は不要）
+  SITE_URL: 'https://school.junkbranding.com' // 公開サイトのURL（末尾の / は不要）
 };
 
 /** 空き状況を返す：GET ?action=slots → { ok: true, slots: { "2026-10-08": ["19:00","20:00"], ... } } */
