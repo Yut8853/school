@@ -21,7 +21,7 @@ const CONFIG = {
 
   // --- Stripe Checkout（受講料の決済） ---
   // シークレットキーはコードに書かず、「プロジェクトの設定」→「スクリプト プロパティ」に STRIPE_SECRET_KEY として保存する
-  STRIPE_PRICE_ID: 'price_...',          // TODO: Stripeで作成した受講料（398,000円）の価格ID
+  STRIPE_PRICE_ID: 'price_1UNUysR5onbGewe4tmLFoOBA', // サンドボックス：HP作成スクール（398,000円）。本番では本番用価格IDに差し替える
   SITE_URL: 'https://example.com'        // TODO: 本番サイトのURL（末尾の / は不要）
 };
 
@@ -113,14 +113,14 @@ function createCheckoutSession_() {
   const mode = 'payment';
   const params = {
     // Checkout Studio で設定した値（fixed_by_ui）
-    'ui_mode': 'hosted_page', // SDK・APIのバージョンが古い場合は 'hosted'（STRIPE_INTEGRATION_TODO.md 参照）
+    // ui_mode は省略し、Stripe のホスト型 Checkout（既定値）を使用する。
     'billing_address_collection': 'auto',
     'phone_number_collection[enabled]': 'false',
     'automatic_tax[enabled]': 'false',
     'allow_promotion_codes': 'false',
     'submit_type': 'auto',
-    'integration_identifier': 'hosted_mobile_app_0001',
-    'origin_context': 'mobile_app',
+    'payment_method_types[0]': 'card',
+    'locale': 'ja',
     // 仮の値（sample_only）：STRIPE_INTEGRATION_TODO.md を見て差し替える
     'mode': mode,
     'success_url': CONFIG.SITE_URL + '/thanks.html?session_id={CHECKOUT_SESSION_ID}',

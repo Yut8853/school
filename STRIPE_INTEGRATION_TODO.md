@@ -1,7 +1,30 @@
 # Stripe 連携：残りの作業（STRIPE_INTEGRATION_TODO）
 
 Stripe Checkout（Stripeがホストする決済ページ）で、受講料398,000円を受け付ける仕組みを追加しました。
-このサイトは静的なHTMLなので、Checkout Session を作るサーバー側の処理は、面談予約で使っている **Google Apps Script**（[booking/Code.gs](booking/Code.gs)）に追加しています。面談予約と同じウェブアプリのURLで動きます。
+現在は **Stripe Payment Link** へ直接移動する方式です。決済にApps Scriptは不要です。代替方式として、Checkout Sessionを作る処理も [booking/Code.gs](booking/Code.gs) に用意しています。
+
+## 現在の接続状況（2026-10-06）
+
+ユーザー提供のStripe画面で確認したサンドボックスの商品：
+- 商品：HP作成スクール（398,000円）
+- 商品ID：`prod_VOHXWpf0QgAUPE`
+- 価格ID：`price_1UNUysR5onbGewe4tmLFoOBA`（`booking/Code.gs` に設定済み）
+- 本番用として提供された決済リンク：`https://buy.stripe.com/eVq28t87e9VBaKXgfwf3a01`（`confirm.html` の `data-payment-link` に設定済み）。
+- 以前のテスト決済リンク：`https://buy.stripe.com/test_14A5kFevQ0Pmaa5dlp7Zu00`（サイトでは使用していません）。
+- 本番リンクの商品・金額・有効状態、セキュリティチェックの完了状況：未確認。
+- サイト公開・Stripe上でのテスト決済完了の確認：未実施。
+
+上記の価格IDはテスト環境のものです。現在のPayment Link方式ではこのIDは使用しません。Apps Script方式へ切り替えて本番で使う場合は、本番環境の価格ID・キーを設定してください。
+
+## Apps Script が未作成の場合：Payment Link で接続
+
+1. Stripeで「0→1 Web制作スクール 受講料」（398,000円・JPY・一回払い）の決済リンクを作成します。最初はテスト環境で確認してください。
+2. `confirm.html` の `data-payment-link=""` に `https://buy.stripe.com/…` を設定します。設定されていれば Apps Script より優先されます。シークレットキーは不要です。
+3. 本番受付前に最終確認ページの受講開始日・実費・受講条件・キャンセル条件を確定します。
+4. Payment Link側の決済完了画面を使用できます。公開URLが決まったら、必要に応じて `thanks.html` へのリダイレクトを設定します。
+5. 支払いの確定はStripeダッシュボードで確認してください。完了ページへのアクセスだけでは支払い済みと判断しません。分割払いはPayment Link側でも別途設定・確認が必要です。
+
+以下は Apps Script で Checkout Session を作る場合の設定です。
 
 ## Values to Replace
 
@@ -16,33 +39,32 @@ Stripe Checkout（Stripeがホストする決済ページ）で、受講料398,0
 | mode | `payment` | 受講料は一括の支払いなので `payment` のままでよい。継続課金にする場合だけ `subscription` |
 | success_url | `https://example.com/thanks.html?session_id={CHECKOUT_SESSION_ID}` | `CONFIG.SITE_URL` を本番サイトのURLにする。`{CHECKOUT_SESSION_ID}` はそのまま残す |
 | cancel_url | `https://example.com/confirm.html` | `CONFIG.SITE_URL` を本番サイトのURLにする（決済をやめたときに最終確認ページへ戻る） |
-| line_items[].price | `price_...` | Stripeダッシュボード（https://dashboard.stripe.com/prices）で受講料398,000円（JPY・一括）の価格を作り、その価格ID（`price_` で始まる）を `CONFIG.STRIPE_PRICE_ID` に入れる |
+| line_items[].price | `price_1UNUysR5onbGewe4tmLFoOBA`（テスト） | Stripeダッシュボード（https://dashboard.stripe.com/prices）で受講料398,000円（JPY・一括）の価格を作り、その価格ID（`price_` で始まる）を `CONFIG.STRIPE_PRICE_ID` に入れる |
 | data-checkout-endpoint | （空） | `confirm.html` の `<form id="cf-final" … data-checkout-endpoint="">` に、Apps Script のウェブアプリURL（面談予約と同じURL）を入れる |
 
 ## Configured Parameters
 
-Checkout Studio で設定された値です。コードにそのまま入れてあります。
+Webサイト用の Checkout に合わせた設定です。
 
 **Files containing these parameters:**
 - [booking/Code.gs](booking/Code.gs)（`createCheckoutSession_()`）
 
 | Parameter | Value |
 |-----------|-------|
-| ui_mode | `hosted_page` |
+| ui_mode | 省略（ホスト型の既定値を使用） |
 | billing_address_collection | `auto` |
 | phone_number_collection | `{ enabled: false }` |
 | automatic_tax | `{ enabled: false }` |
 | allow_promotion_codes | `false` |
 | submit_type | `auto` |
-| integration_identifier | `hosted_mobile_app_0001` |
-| origin_context | `mobile_app` |
+| payment_method_types | `card` |
+| locale | `ja` |
 | payment_method_collection | `always`（mode が `subscription` のときだけ送る設定。今回は `payment` なので送っていません） |
 | payment_method_options[card][installments][enabled] | `true`（分割払い。Checkout Studio の設定ではなく、運営者の要望で追加） |
 
 ### 確認してほしい点
 
-- **ui_mode のバージョン：** Stripe SDK ではなく REST API を直接呼んでおり、APIバージョンは指定していません（アカウントの既定のバージョンが使われます）。`hosted_page` は新しいバージョンの値です。決済ページを開くときに `ui_mode` のエラーが出る場合は、`'hosted'` に変えてください。
-- **origin_context が mobile_app：** Checkout Studio で「モバイルアプリ」向けの設定が選ばれています。このサイトはWebサイトなので、意図した設定か確認してください。Web向けにする場合は、Checkout Studio で設定し直して、出力された値に差し替えます。
+- **Web向け設定：** `ui_mode` は既定値を使用し、モバイルアプリ用の `origin_context` と `integration_identifier` は送信しません。
 - **分割払い：** Checkout Session に `payment_method_options[card][installments][enabled]=true` を付けて、分割払いを有効にしています。次の条件をすべて満たすと、決済ページでカード番号を入力したあとに、支払い回数を選ぶ欄が表示されます。
   - Stripeのアカウントが日本のアカウントであること
   - 通貨が日本円であること（受講料の価格をJPYで作る）
