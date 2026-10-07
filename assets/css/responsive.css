@@ -1,4 +1,18 @@
 /* Text flow and intrinsic sizing shared by desktop and mobile layouts. */
+/* Keep the specialist school label and consultation link readable on phones. */
+@media (max-width: 640px) {
+  .r .hd .logo { gap: 6px; }
+  .r .hd .logo-svg { width: 44px; }
+  .r .hd .logo-name { font-size: 11px; letter-spacing: 0; white-space: nowrap; }
+  .r .hd .btn-sm { font-size: 12px; padding-left: 12px; gap: 6px; }
+  .r .hd .btn-sm .btn-t { white-space: nowrap; }
+  .r .hd .btn-sm .btn-ic { width: 32px; height: 32px; }
+  .r .hd-in { gap: 8px; }
+}
+@media (max-width: 360px) {
+  .r .hd-in { flex-wrap: wrap; padding-top: 6px; padding-bottom: 6px; }
+  .r .hd .btn-sm { margin-left: auto; }
+}
 .r { word-break: normal; overflow-wrap: anywhere; line-break: strict; }
 .r :is(h1, h2, h3, summary, .btn-t, .lesson-card b, .cp-h b, .cp-dl, .pf-r, td, th) {
   word-break: normal;

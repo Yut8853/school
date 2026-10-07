@@ -1,6 +1,7 @@
 """Validate the static site's metadata and locally supplied sharing assets."""
 from collections import Counter
 from html.parser import HTMLParser
+from html import unescape
 from pathlib import Path
 from urllib.parse import urlparse
 import json
@@ -49,11 +50,31 @@ def png_size(filename):
     return struct.unpack('>II', data[16:24])
 
 
+def plain_text(source):
+    return re.sub(r'\s+', '', unescape(re.sub(r'<[^>]+>', '', source)))
+
+
+def references(value):
+    if isinstance(value, dict):
+        if set(value) == {'@id'}:
+            yield value['@id']
+        for child in value.values():
+            yield from references(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from references(child)
+
+
 def main():
     descriptions, titles, indexed = [], [], set()
+    entities, refs = {}, []
+    shared_types = {'EducationalOrganization', 'WebSite', 'Course'}
+    faq_count = 0
     pages = sorted(ROOT.glob('*.html'))
     for path in pages:
-        head = path.read_text().split('</head>', 1)[0]
+        source_html = path.read_text()
+        head, body = source_html.split('</head>', 1)
+        assert len(re.findall(r'<h1\b', body)) == 1, (path.name, 'One H1 required')
         assert 'https://example.com' not in head, path.name
         parser = Head()
         parser.feed(head)
@@ -81,6 +102,27 @@ def main():
             local_urls(schema)
             page = next(n for n in schema['@graph'] if n.get('@id') == url + '#webpage')
             assert page['description'] == tags['description']
+            assert page['name'] == title, path.name
+            refs.extend((path.name, ref) for ref in references(schema))
+            for node in schema['@graph']:
+                node_id = node.get('@id')
+                if node_id:
+                    if node_id in entities and node['@type'] in shared_types:
+                        assert node == entities[node_id], (path.name, 'Conflicting entity', node_id)
+                    entities[node_id] = node
+                if node['@type'] == 'FAQPage':
+                    # An answer in JSON-LD must have the same text as its visible FAQ.
+                    visible = {}
+                    for detail in re.findall(r'<details\b[^>]*>(.*?)</details>', body, re.S):
+                        question = re.search(r'<summary\b[^>]*>(.*?)</summary>', detail, re.S)
+                        if question:
+                            visible[plain_text(question[1])] = plain_text(detail[question.end():])
+                    for question in node['mainEntity']:
+                        assert visible.get(plain_text(question['name'])) == plain_text(question['acceptedAnswer']['text']), (path.name, 'FAQ differs from visible content', question['name'])
+                        faq_count += 1
+    for filename, ref in refs:
+        if ref.startswith(BASE):
+            assert ref in entities, (filename, 'Undefined entity reference', ref)
     assert len(set(titles)) == len(pages), 'Duplicate page titles'
     assert len(set(descriptions)) == len(pages), 'Duplicate page descriptions'
     entries = ET.parse(ROOT / 'sitemap.xml').findall('{*}url/{*}loc')
@@ -88,7 +130,7 @@ def main():
     assert len(entries) == len(indexed)
     assert 'Sitemap: ' + BASE + '/sitemap.xml' in (ROOT / 'robots.txt').read_text()
     assert png_size('logo.png') == (512, 512)
-    print(f'PASS: {len(pages)} pages; unique titles/descriptions; OGP/X; canonical; JSON-LD; {len(indexed)} sitemap URLs; noindex; PNG assets')
+    print(f'PASS: {len(pages)} pages; unique titles/descriptions; OGP/X; canonical; connected and consistent JSON-LD; {faq_count} visible FAQ matches; one H1 per page; {len(indexed)} sitemap URLs; noindex; PNG assets')
 
 if __name__ == '__main__':
     main()
