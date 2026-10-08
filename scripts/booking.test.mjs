@@ -20,7 +20,7 @@ test('application reaches configured recipient without requiring a booking slot'
   const a = app(); const result = a.post(valid);
   assert.equal(result.ok, true);
   assert.equal(a.messages.length, 2);
-  assert.equal(a.messages[0].to, 'hello@junkbranding.com');
+  assert.equal(a.messages[0].to, 'factory0611@gmail.com');
   assert.equal(a.messages[0].replyTo, valid.email);
   assert.equal(a.messages[1].to, valid.email);
   assert.equal(a.messages[1].replyTo, 'hello@junkbranding.com');

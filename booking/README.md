@@ -2,7 +2,7 @@
 
 この `Code.gs` は、次の3つを1つのウェブアプリで処理します。
 
-- 受講申し込み：hello@junkbranding.comへ通知し、申込者へ受付メールを送信
+- 受講申し込み：factory0611@gmail.comへ通知し、申込者へ受付メールを送信
 - 面談予約（Googleカレンダー連携）：このページで説明します
 - 受講料の決済（Stripe Checkout）：ZIPのいちばん上の `STRIPE_INTEGRATION_TODO.md` を見てください
 
@@ -13,7 +13,7 @@
 - 予約できるのは **毎日 19:00〜20:00 と 20:00〜21:00 の2枠だけ**（各1時間）です。
 - それ以外の時間は、すべて「予定あり」と表示されます。
 - 19時台・20時台でも、Googleカレンダーに予定（終日の予定を含む）が入っていれば「予定あり」になります。休みたい日は、カレンダーに終日の予定を入れてください。
-- 予約が入ると、factory0611@gmail.com のカレンダーに予定が作られ、申込者へ招待メール（Google Meet のURLつき）が届きます。hello@junkbranding.comにも通知メールが届きます。
+- 予約が入ると、factory0611@gmail.com のカレンダーに予定が作られ、申込者へ招待メール（Google Meet のURLつき）が届きます。factory0611@gmail.comにも通知メールが届きます。
 - 同じ枠に同時に申し込みがあっても、先に入った1件だけが確定します。
 
 メールアドレスはサイトには表示されません（このスクリプトの中だけで使います）。
@@ -54,8 +54,8 @@
 2. `authorizeServices` を実行し、カレンダーとメール送信の権限を許可。この関数はメール送信・予約登録を行いません。
 3. ウェブアプリとしてデプロイ（実行ユーザー：自分、アクセス：全員）。
 4. 発行された `/exec` で終わるURLを共有するか、apply.htmlの `data-endpoint` と `data-booking-endpoint` の両方に設定。
-5. サイトも公開し、申込通知がhello@junkbranding.comへ届くこと、申込者の受付メール、予約・招待を確認。
+5. サイトも公開し、申込通知がfactory0611@gmail.comへ届くこと、申込者の受付メール、予約・招待を確認。
 
-送信元はApps Scriptを実行するGoogleアカウントです。通知先はhello@junkbranding.com、予約先カレンダーはfactory0611@gmail.comのままです。返信先は申込通知では申込者、受付メールではhello@junkbranding.comになります。
+送信元はApps Scriptを実行するGoogleアカウントです。通知先はfactory0611@gmail.com、予約先カレンダーはfactory0611@gmail.comのままです。返信先は申込通知では申込者、受付メールではhello@junkbranding.comになります。
 
 受信処理の単体確認：`node --test scripts/booking.test.mjs`（Googleへの通信・実メール送信はしません）。

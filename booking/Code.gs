@@ -8,7 +8,7 @@
  * 設定は CONFIG だけを書き換えてください。
  */
 const CONFIG = {
-  NOTIFY_EMAIL: 'hello@junkbranding.com', // 申し込み・面談予約の通知先
+  NOTIFY_EMAIL: 'factory0611@gmail.com', // 申し込み・面談予約の通知先
   CALENDAR_ID: 'factory0611@gmail.com', // 予約を入れるカレンダー
   TIMEZONE: 'Asia/Tokyo',
   SLOTS: ['19:00', '20:00'],            // 1時間枠の開始時刻（19時以降の2枠）
@@ -135,7 +135,7 @@ function receiveApplication_(p, name, email, tel, message) {
   try {
     MailApp.sendEmail({
       to: email,
-      replyTo: CONFIG.NOTIFY_EMAIL,
+      replyTo: 'hello@junkbranding.com',
       subject: '【0→1】お申し込みを受け付けました',
       body: name + ' 様\n\nお申し込みありがとうございます。内容を確認し、受講契約の最終確認ページをメールでご案内します。\nこの時点では契約・お支払いは成立していません。\n\nお問い合わせ：hello@junkbranding.com\nJUNKBRANDING'
     });

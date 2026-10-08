@@ -73,3 +73,7 @@
 ## Google Apps Script送信先の設定
 
 2026-10-08、運営者が発行したウェブアプリURLをapply.htmlのdata-endpointとdata-booking-endpointの両方へ設定。GET action=slotsはok:trueと実際の空き枠を返した。ローカル検査と受信処理の6件の単体テストは成功。サイト公開と実メール到着・予約登録の確認は未実施。
+
+## 通知先の変更（最新）
+
+運営者からhello@junkbranding.comへの通知到着の報告あり。新たな指示により、申し込み・面談予約のNOTIFY_EMAILをfactory0611@gmail.comへ変更。公開問い合わせ先と申込者向け受付メールの返信先はhello@junkbranding.comを維持。ローカルのCode.gsとテスト・手順書を更新。Google Apps Script側のコード更新と新しいバージョンでの再デプロイは未実施。
