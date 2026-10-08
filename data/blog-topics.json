@@ -1,0 +1,455 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "id": "learning-log",
+      "title": "学習メモを次の制作に使う",
+      "category": "学習ガイド",
+      "question": "何を記録すれば同じところで迷わなくなるか",
+      "exercise": "今日のつまずきと解決手順を3行にまとめる",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ]
+    },
+    {
+      "id": "reading-errors",
+      "title": "エラーメッセージの読み始め方",
+      "category": "学習ガイド",
+      "question": "赤い文字が出たとき最初にどこを見るか",
+      "exercise": "エラーの場所・原因候補・試したことを整理する",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "失敗の直し方",
+        "確認チェックリスト"
+      ]
+    },
+    {
+      "id": "small-scope",
+      "title": "最初の制作物を小さくする",
+      "category": "学習ガイド",
+      "question": "途中で止めないために何を作らないと決めるか",
+      "exercise": "1ページで完結する制作範囲を書き出す",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "制作過程の解説"
+      ]
+    },
+    {
+      "id": "practice-feedback",
+      "title": "フィードバックを次の課題に変える",
+      "category": "学習ガイド",
+      "question": "指摘が多いとき何から直すか",
+      "exercise": "指摘を操作・情報・見た目の順に整理する",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "小さな制作課題",
+        "手順解説"
+      ]
+    },
+    {
+      "id": "explain-code",
+      "title": "書いたコードを自分で説明する",
+      "category": "学習ガイド",
+      "question": "動くコードと理解したコードをどう見分けるか",
+      "exercise": "3行の処理を日本語で説明する",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "確認チェックリスト",
+        "失敗の直し方"
+      ]
+    },
+    {
+      "id": "reading-documentation",
+      "title": "公式ドキュメントの読み方",
+      "category": "学習ガイド",
+      "question": "分からない単語からどう調べるか",
+      "exercise": "一つの要素の用途と注意点を公式資料で確認する",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "制作過程の解説",
+        "判断基準の比較"
+      ]
+    },
+    {
+      "id": "heading-order",
+      "title": "見出しの順序を整える",
+      "category": "HTML / CSS",
+      "question": "文字の大きさと見出しレベルをどう分けるか",
+      "exercise": "h1からh3の構造を紙に書く",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ]
+    },
+    {
+      "id": "form-label",
+      "title": "フォームのラベルを付ける",
+      "category": "HTML / CSS",
+      "question": "placeholderだけでは何が困るか",
+      "exercise": "入力欄とlabelを関連付ける",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "失敗の直し方",
+        "確認チェックリスト"
+      ]
+    },
+    {
+      "id": "image-dimensions",
+      "title": "画像の表示領域を先に確保する",
+      "category": "HTML / CSS",
+      "question": "画像の読み込みで文字が動くのをどう防ぐか",
+      "exercise": "widthとheightを持つ画像を作る",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "制作過程の解説"
+      ]
+    },
+    {
+      "id": "flex-min-width",
+      "title": "Flexbox内の長い文字を収める",
+      "category": "HTML / CSS",
+      "question": "カードが横にはみ出す原因をどう切り分けるか",
+      "exercise": "長いURLを含むカードを修正する",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "小さな制作課題",
+        "手順解説"
+      ]
+    },
+    {
+      "id": "grid-columns",
+      "title": "カードの列数をCSS Gridで変える",
+      "category": "HTML / CSS",
+      "question": "固定幅を並べずに列数を調整するには",
+      "exercise": "3枚のカードを狭い幅でも表示する",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "確認チェックリスト",
+        "失敗の直し方"
+      ]
+    },
+    {
+      "id": "focus-style",
+      "title": "キーボードの現在位置を見せる",
+      "category": "HTML / CSS",
+      "question": "フォーカスの枠を消すと何が起きるか",
+      "exercise": "Tab操作でリンクの現在位置を確かめる",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "制作過程の解説",
+        "判断基準の比較"
+      ]
+    },
+    {
+      "id": "type-hierarchy",
+      "title": "文字の大きさで情報の順番を伝える",
+      "category": "デザイン",
+      "question": "見出しと本文の差をどう決めるか",
+      "exercise": "3段階の文字サイズで案内を組む",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "title": "文字色と背景色を確認する",
+      "category": "デザイン",
+      "question": "淡い色が読みにくいとき何を直すか",
+      "exercise": "一組の配色を数値と見た目で確認する",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "失敗の直し方",
+        "確認チェックリスト"
+      ]
+    },
+    {
+      "id": "button-wording",
+      "title": "ボタンの言葉を具体的にする",
+      "category": "デザイン",
+      "question": "こちらだけでは何が伝わらないか",
+      "exercise": "リンク先が分かる文言に書き換える",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "制作過程の解説"
+      ]
+    },
+    {
+      "id": "photo-crop",
+      "title": "写真の切り抜き位置を決める",
+      "category": "デザイン",
+      "question": "画面幅で被写体が消えるときどう直すか",
+      "exercise": "同じ写真を縦長と横長で比較する",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "小さな制作課題",
+        "手順解説"
+      ]
+    },
+    {
+      "id": "wireframe-priority",
+      "title": "ワイヤーフレームで情報の優先順位を決める",
+      "category": "デザイン",
+      "question": "色を付ける前に何を決めるか",
+      "exercise": "3つの情報の表示順を理由付きで決める",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "確認チェックリスト",
+        "失敗の直し方"
+      ]
+    },
+    {
+      "id": "consistent-components",
+      "title": "同じ役割のUIをそろえる",
+      "category": "デザイン",
+      "question": "ページごとに違うボタンをどう整理するか",
+      "exercise": "ボタンの役割を2種類に分ける",
+      "audiences": [
+        "完全未経験",
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "制作過程の解説",
+        "判断基準の比較"
+      ]
+    },
+    {
+      "id": "broken-link",
+      "title": "リンク切れを見つけて直す",
+      "category": "公開・運用",
+      "question": "相対パスと公開先の違いをどう確認するか",
+      "exercise": "別フォルダへのリンクを確認する",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ]
+    },
+    {
+      "id": "page-title",
+      "title": "ページごとのtitleを付ける",
+      "category": "公開・運用",
+      "question": "検索やタブでページを区別するには",
+      "exercise": "3ページに固有のtitleを付ける",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "失敗の直し方",
+        "確認チェックリスト"
+      ]
+    },
+    {
+      "id": "ogp-preview",
+      "title": "共有時のタイトルと画像を整える",
+      "category": "公開・運用",
+      "question": "記事を共有したとき何が表示されるか",
+      "exercise": "OGPのタイトルと説明の一致を確認する",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "制作過程の解説"
+      ]
+    },
+    {
+      "id": "image-weight",
+      "title": "画像の容量を見直す",
+      "category": "公開・運用",
+      "question": "見た目を保ちながら何を減らせるか",
+      "exercise": "同じ画像の寸法と容量を比較する",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "小さな制作課題",
+        "手順解説"
+      ]
+    },
+    {
+      "id": "update-check",
+      "title": "更新後に確認する範囲を決める",
+      "category": "公開・運用",
+      "question": "一か所の変更が別ページに影響しないか",
+      "exercise": "変更箇所と関連ページの確認表を作る",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "確認チェックリスト",
+        "失敗の直し方"
+      ]
+    },
+    {
+      "id": "backup-before-edit",
+      "title": "更新前に戻せる状態を作る",
+      "category": "公開・運用",
+      "question": "変更が失敗したとき何を戻せばよいか",
+      "exercise": "変更前の版と変更内容を記録する",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "制作過程の解説",
+        "判断基準の比較"
+      ]
+    },
+    {
+      "id": "request-questions",
+      "title": "曖昧な依頼を質問に変える",
+      "category": "制作の進め方",
+      "question": "いい感じにしてという依頼をどう具体化するか",
+      "exercise": "目的と読者を確かめる質問を3つ作る",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "完成の条件を先に決める",
+      "category": "制作の進め方",
+      "question": "どこまでできれば完成と呼べるか",
+      "exercise": "確認できる完成条件を5つ書く",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "失敗の直し方",
+        "確認チェックリスト"
+      ]
+    },
+    {
+      "id": "review-request",
+      "title": "レビューで見てほしい点を伝える",
+      "category": "制作の進め方",
+      "question": "作品だけ送ると何が伝わらないか",
+      "exercise": "目的・変更点・迷った点をまとめる",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "制作過程の解説"
+      ]
+    },
+    {
+      "id": "revision-priority",
+      "title": "修正の優先順位を付ける",
+      "category": "制作の進め方",
+      "question": "見た目と機能の問題が同時にあったらどうするか",
+      "exercise": "3つの不具合を利用者への影響で並べる",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "小さな制作課題",
+        "手順解説"
+      ]
+    },
+    {
+      "id": "handover-note",
+      "title": "公開後に渡す更新メモを作る",
+      "category": "制作の進め方",
+      "question": "作った人以外が更新するには何が必要か",
+      "exercise": "更新箇所と確認手順を1枚にまとめる",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "確認チェックリスト",
+        "失敗の直し方"
+      ]
+    },
+    {
+      "id": "content-inventory",
+      "title": "制作前に必要な原稿を洗い出す",
+      "category": "制作の進め方",
+      "question": "文章と写真が不足したまま進めないためには",
+      "exercise": "掲載情報の担当と準備状況を整理する",
+      "audiences": [
+        "一つのサイトを公開したい",
+        "制作工程を見直したい"
+      ],
+      "formats": [
+        "制作過程の解説",
+        "判断基準の比較"
+      ]
+    }
+  ]
+}

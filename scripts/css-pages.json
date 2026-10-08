@@ -146,5 +146,47 @@
     "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
+  ],
+  "blog.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-design-spacing.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-first-website.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-html-link-button.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-portfolio-process.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-publish-checklist.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-responsive-check.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
   ]
 }

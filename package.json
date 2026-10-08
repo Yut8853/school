@@ -1,11 +1,15 @@
 {
   "devDependencies": {
     "clean-css": "5.3.3",
+    "marked": "^15.0.12",
     "purgecss": "8.0.0"
   },
   "private": true,
   "scripts": {
-    "build": "node scripts/build-css.mjs",
-    "check": "node scripts/build-css.mjs --check && python3 scripts/check_metadata.py"
+    "build": "node scripts/build-blog.mjs && node scripts/build-css.mjs",
+    "check": "npm run blog:lint && node scripts/build-blog.mjs --check && node scripts/build-css.mjs --check && python3 scripts/check_metadata.py",
+    "test:blog": "node --test scripts/blog.test.mjs scripts/blog-editorial.test.mjs && python3 scripts/check_blog.py",
+    "blog:idea": "node scripts/blog-idea.mjs",
+    "blog:lint": "node scripts/lint-blog.mjs"
   }
 }
