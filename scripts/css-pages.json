@@ -124,6 +124,7 @@
   "quality.html": [
     "assets/css/fonts.css",
     "assets/css/site.css",
+    "assets/css/quality.css",
     "assets/css/responsive.css"
   ],
   "terms.html": [

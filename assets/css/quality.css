@@ -1,0 +1,11 @@
+.quality-results{display:grid;gap:24px;margin-block:24px 40px}
+.quality-result{padding:clamp(20px,4vw,32px);border:1px solid var(--line);border-radius:20px;background:var(--bg2)}
+.quality-result h3{margin:0 0 12px;font-size:20px}
+.quality-result p{margin:12px 0;overflow-wrap:anywhere}
+.quality-scores{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:24px 0}
+.quality-scores div{min-width:0}
+.quality-scores dt{font-size:13px;color:var(--sub)}
+.quality-scores dd{margin:4px 0 0;font-family:"Geist",sans-serif;font-size:36px;font-weight:700;line-height:1.2}
+.quality-report-links{display:flex;flex-wrap:wrap;gap:12px 24px}
+.quality-report-links a{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:600px){.quality-scores{grid-template-columns:repeat(2,minmax(0,1fr))}}
