@@ -1,0 +1,9 @@
+/* Optional avoids late swaps; mobile uses the existing Japanese system fallback. */
+@font-face{font-family:"Geist";font-style:normal;font-weight:100 900;font-display:optional;src:url("../fonts/geist-latin.woff2") format("woff2")}
+@font-face{font-family:"Geist Mono";font-style:normal;font-weight:100 900;font-display:optional;src:url("../fonts/geist-mono-latin.woff2") format("woff2")}
+@media (min-width:769px){
+@font-face{font-family:"Zen Kaku Gothic New";font-style:normal;font-weight:400;font-display:optional;src:url("../fonts/zen-kaku-400.woff2") format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-style:normal;font-weight:500;font-display:optional;src:url("../fonts/zen-kaku-500.woff2") format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-style:normal;font-weight:700;font-display:optional;src:url("../fonts/zen-kaku-700.woff2") format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-style:normal;font-weight:900;font-display:optional;src:url("../fonts/zen-kaku-900.woff2") format("woff2")}
+}

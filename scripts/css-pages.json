@@ -1,122 +1,148 @@
 {
   "apply.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/apply.css",
     "assets/css/responsive.css"
   ],
   "capstone.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/capstone.css",
     "assets/css/responsive.css"
   ],
   "case.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/case.css",
     "assets/css/responsive.css"
   ],
   "company.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
   ],
   "confirm.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
   ],
   "curriculum.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/curriculum.css",
     "assets/css/responsive.css"
   ],
   "index.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/index.css",
     "assets/css/responsive.css"
   ],
   "instructor.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/instructor.css",
     "assets/css/responsive.css"
   ],
   "lesson-a11y.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson-cms.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson-deploy.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson-design.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson-hearing.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson-javascript.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson-qa.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson-responsive.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson-seo.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson-ui.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "lesson.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/lesson.css",
     "assets/css/responsive.css"
   ],
   "price.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
   ],
   "privacy.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
   ],
   "quality.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
   ],
   "terms.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
   ],
   "thanks.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
   ],
   "tokushoho.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
   ],
   "works.html": [
+    "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css"
   ]

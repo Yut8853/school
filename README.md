@@ -40,10 +40,10 @@ EVALUATION_PROMPT.md   他のAIに評価してもらうためのプロンプト
 
 - 全26ページは `assets/css/generated/*.min.css` を読み込みます。`assets/css/` 直下のCSSが編集元で、`scripts/css-pages.json` に各ページで使うファイルと読み込み順を記録しています。HTML・CSS・JSを変更したら `npm ci`（初回）→ `npm run build` → `npm run check` を実行し、生成したCSSも公開してください。生成済みCSSを直接編集しないでください。
 - ビルドではページのHTMLとフォームのJSから未使用セレクタを除外し、最小化します。動的な状態クラスは明示的にも保護しています。新しい動的クラスを文字列の結合で作る場合は `scripts/build-css.mjs` の `safelist` へ追加してください。新規ページは `scripts/css-pages.json` に追加してください。
-- Google FontsのCSSは描画をブロックしないよう読み込み、完了するまでは既存のシステムフォントを使います。JavaScript無効時には `noscript` 内の通常読み込みを使います。フォント切り替え時のレイアウト変化は公開後の実測で確認してください。
+- Google Fonts APIへのアクセスをなくし、`assets/fonts/` からフォントを配信します。768px以下では日本語を端末標準の書体で表示し、769px以上ではサイト内の文字に絞ったZen Kaku Gothic Newを使用します。英字はGeist / Geist Monoです。`font-display: optional` により、フォント取得が遅いときはフォールバックで表示を続けます。本文に新しい文字を追加したときの再生成手順・ライセンスは `assets/fonts/README.md` にあります。
 - TOPの見出し・説明・CTAは、登場アニメーションを待たずに表示します。見出しのグラデーションの連続アニメーションも停止しています。
 - canonicalは `https://school.junkbranding.com/` を維持します。Vercelの `vercel.json` に `/index.html` → `/` の恒久リダイレクトを設定しています。PageSpeedは `/` で再測定してください。
-- 静的検証は改善スコアの実測ではありません。公開後にモバイルのPageSpeedを再測定し、FCP・LCP・CLSと、フォーム・予約表示・PC/スマートフォンの表示を確認してください。
+- 追加修正後、Lighthouse 13.5.0のローカル計測でモバイル100点（FCP/LCP 1.5秒、CLS 0）、PC99点を確認しました。同一ローカルサーバーで実回線スロットリングを適用した変更前後は62点→100点でした。記録は `reports/performance-2026-10-08.json` にあります。公開環境のPageSpeedスコアとは別の測定なので、公開後は `/` で再測定してください。
 
 ### HP制作専門スクールとしてのSEO（2026-10-07）
 
@@ -65,7 +65,7 @@ python3 -m http.server 8000
 
 - スクロールに連動する演出は、Chrome / Edge / Safari 26 以降で動きます。非対応のブラウザでは、最初から完成した状態で表示されます。
 - 「視差効果を減らす」設定の環境では、動きを止めて完成状態を表示します。
-- フォントは Google Fonts（Geist / Geist Mono / Zen Kaku Gothic New）をネット経由で読み込みます。
+- フォントはサイト内から配信します（モバイルの日本語は端末標準の書体）。詳細は `assets/fonts/README.md` を参照してください。
 - キーボード操作用に「本文へスキップ」リンクがあります（Tabキーで表示）。
 
 ## 公開前に差し替えるもの

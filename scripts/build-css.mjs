@@ -23,7 +23,9 @@ for (const [page, sources] of Object.entries(manifest)) {
     variables: false,
     fontFace: false,
   });
-  const minified = new CleanCSS({ level: 1, rebase: false }).minify(result.css);
+  // All source styles live in assets/css; bundles are one directory deeper.
+  const minified = new CleanCSS({ level: 1, rebase: true, rebaseTo: `${root}assets/css/generated` })
+    .minify({ 'assets/css/site.css': { styles: result.css } });
   if (minified.errors.length) throw new Error(`${page}: ${minified.errors.join('\n')}`);
   const output = `assets/css/generated/${page.replace('.html', '.min.css')}`;
   const styles = minified.styles + '\n';
