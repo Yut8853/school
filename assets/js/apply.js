@@ -6,7 +6,7 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var form = $('#ap-form');
-  var BOOK = form.getAttribute('data-booking-endpoint') || '';
+  var BOOK = (form.getAttribute('data-booking-endpoint') || '').trim();
   var OPEN = ['19:00', '20:00'];
   var HOURS = ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'];
   var WD = ['日', '月', '火', '水', '木', '金', '土'];
@@ -31,8 +31,7 @@
   function isFree(dk, t) {
     if (OPEN.indexOf(t) < 0) { return false; }
     if (state.avail) { return (state.avail[dk] || []).indexOf(t) > -1; }
-    var n = parseInt(dk.slice(-2), 10);
-    return !((n % 3 === 0 && t === '19:00') || (n % 5 === 0 && t === '20:00'));
+    return false;
   }
   function fmtSlot(k) {
     if (!k) { return '―'; }
@@ -109,17 +108,19 @@
       var ok = isFree(state.day, t), k = state.day + 'T' + t, h = parseInt(t, 10), b = document.createElement('button');
       b.type = 'button'; b.disabled = !ok; b.className = 'bk-s' + (ok ? '' : ' busy') + (state.slot === k ? ' on' : '');
       b.setAttribute('aria-pressed', state.slot === k ? 'true' : 'false');
-      b.innerHTML = '<span class="bk-time">' + t + '〜' + (h + 1) + ':00</span><span class="bk-st">' + (ok ? (state.slot === k ? '選択中' : '空き') : '予定あり') + '</span>';
+      b.innerHTML = '<span class="bk-time">' + t + '〜' + (h + 1) + ':00</span><span class="bk-st">' + (ok ? (state.slot === k ? '選択中' : '空き') : (state.avail ? '予定あり' : '確認できません')) + '</span>';
       if (ok) { b.addEventListener('click', function () { state.slot = k; renderBooking(); validate(); }); }
       sbox.appendChild(b);
     });
-    $('#bk-note').textContent = BOOK ? 'オンライン（Google Meet）で1時間。表示されている「空き」の枠から選べます。' : 'オンライン（Google Meet）で1時間。※いまはデモ表示です（予約の送信先が未設定です）。';
+    $('#bk-note').textContent = state.avail ? 'オンライン（Google Meet）で1時間。表示されている「空き」の枠から選べます。' : '現在、空き状況を確認できません。面談をご希望の方は hello@junkbranding.com へご連絡ください。';
   }
   function loadSlots() {
     if (!BOOK) { return; }
-    fetch(BOOK + '?action=slots').then(function (r) { return r.json(); }).then(function (j) {
-      if (j && j.ok) { state.avail = j.slots; renderBooking(); }
-    }).catch(function () {});
+    $('#bk-note').textContent = '空き状況を確認しています。';
+    fetch(BOOK + '?action=slots').then(function (r) { if (!r.ok) { throw new Error('HTTP ' + r.status); } return r.json(); }).then(function (j) {
+      if (!j || j.ok !== true || !j.slots || typeof j.slots !== 'object' || Array.isArray(j.slots) || !Object.keys(j.slots).every(function (key) { return Array.isArray(j.slots[key]); })) { throw new Error('Invalid slots'); }
+      state.avail = j.slots; renderBooking();
+    }).catch(function () { state.avail = null; state.slot = ''; renderBooking(); });
   }
 
   $$('[data-mode]').forEach(function (b) {
@@ -183,39 +184,43 @@
     state.sending = false; b.disabled = false;
     $('.s-on', b).hidden = false; $('.s-ing', b).hidden = true; $('.i-on', b).hidden = false; $('.i-ing', b).hidden = true;
   }
-  function done() {
+  function done(result) {
     $('#done-title').textContent = meet() ? '面談のご予約を受け付けました' : 'お申し込みを受け付けました';
     $('#done-text').textContent = (f.name.value ? f.name.value + 'さん、' : '') + (meet()
       ? fmtSlot(state.slot) + 'で面談のご予約を受け付けました。Googleカレンダーの招待とオンライン会議のURLを、ご入力のメールアドレスへお送りします。'
       : 'お申し込みありがとうございます。ご入力のメールアドレスへ、確認のメールをお送りします。');
+    if (!meet() && result && result.confirmationSent === false) {
+      $('#done-text').textContent = 'お申し込みを受け付けました。自動確認メールを送信できませんでしたが、お申し込みの再送信は不要です。内容を確認し、担当者からご連絡します。';
+    }
     modeView(); show(3);
   }
   $('#ap-send').addEventListener('click', function () {
     if (state.sending) { return; }
-    var endpoint = meet() ? BOOK : form.getAttribute('data-endpoint');
+    var endpoint = (meet() ? BOOK : (form.getAttribute('data-endpoint') || '')).trim();
     var err = $('#send-err');
     err.hidden = true;
+    err.textContent = '送信を確認できませんでした。確認メールの有無をご確認のうえ、届いていない場合は hello@junkbranding.com へお問い合わせください。';
     state.sending = true;
     var b = $('#ap-send');
     b.disabled = true;
     $('.s-on', b).hidden = true; $('.s-ing', b).hidden = false; $('.i-on', b).hidden = true; $('.i-ing', b).hidden = false;
     if (!endpoint) {
       console.warn('apply.html の <form id="ap-form"> に送信先URL（data-endpoint / data-booking-endpoint）を設定してください。');
-      setTimeout(function () { resetSend(); err.hidden = false; err.focus(); }, 600);
+      resetSend(); err.textContent = '現在、フォームから送信できません。hello@junkbranding.com へメールでお問い合わせください。'; err.hidden = false; err.focus();
       return;
     }
     var payload = meet()
       ? { name: f.name.value.trim(), email: f.email.value.trim(), tel: f.tel.value.trim(), message: f.msg.value.trim(), date: state.slot.slice(0, 10), time: state.slot.slice(11, 16), website: (form.elements.website || {}).value || '' }
-      : { mode: 'apply', name: f.name.value.trim(), email: f.email.value.trim(), tel: f.tel.value.trim(), month: f.month.value, status: state.status, goals: state.goals, message: f.msg.value.trim(), agree: f.agree.checked, page: location.href, sentAt: new Date().toISOString() };
-    fetch(endpoint, { method: 'POST', headers: { 'Content-Type': meet() ? 'text/plain;charset=utf-8' : 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) })
-      .then(function (r) { if (!r.ok) { throw new Error('HTTP ' + r.status); } return r.json().catch(function () { return { ok: true }; }); })
+      : { mode: 'apply', name: f.name.value.trim(), email: f.email.value.trim(), tel: f.tel.value.trim(), month: f.month.value, status: state.status, goals: state.goals, message: f.msg.value.trim(), agree: f.agree.checked, page: location.href, sentAt: new Date().toISOString(), website: (form.elements.website || {}).value || '' };
+    fetch(endpoint, { method: 'POST', headers: { 'Content-Type': (meet() || /^https:\/\/script\.google\.com\/macros\/s\//.test(endpoint)) ? 'text/plain;charset=utf-8' : 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) })
+      .then(function (r) { if (!r.ok) { throw new Error('HTTP ' + r.status); } return r.json(); })
       .then(function (j) {
-        if (j && j.ok === false) {
+        if (!j || j.ok !== true) {
           resetSend();
-          if (j.error === 'taken') { state.slot = ''; state.avail = null; loadSlots(); show(1); err.hidden = true; $('#e-slot').textContent = '選んだ枠が直前に埋まりました。別の枠を選んでください。'; $('#e-slot').hidden = false; return; }
+          if (j && j.error === 'taken') { state.slot = ''; state.avail = null; loadSlots(); show(1); err.hidden = true; $('#e-slot').textContent = '選んだ枠が直前に埋まりました。別の枠を選んでください。'; $('#e-slot').hidden = false; return; }
           err.hidden = false; err.focus(); return;
         }
-        done();
+        done(j);
       })
       .catch(function () { resetSend(); err.hidden = false; err.focus(); });
   });

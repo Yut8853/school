@@ -8,6 +8,7 @@
  * 設定は CONFIG だけを書き換えてください。
  */
 const CONFIG = {
+  NOTIFY_EMAIL: 'hello@junkbranding.com', // 申し込み・面談予約の通知先
   CALENDAR_ID: 'factory0611@gmail.com', // 予約を入れるカレンダー
   TIMEZONE: 'Asia/Tokyo',
   SLOTS: ['19:00', '20:00'],            // 1時間枠の開始時刻（19時以降の2枠）
@@ -52,6 +53,9 @@ function doPost(e) {
     const email = String(p.email || '').trim().slice(0, 200);
     const tel = String(p.tel || '').trim().slice(0, 40);
     const message = String(p.message || '').trim().slice(0, 2000);
+    if (p.mode === 'apply') {
+      return receiveApplication_(p, name, email, tel, message);
+    }
     const date = String(p.date || '');
     const time = String(p.time || '');
     if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -93,7 +97,7 @@ function doPost(e) {
     }
     if (CONFIG.NOTIFY_OWNER) {
       const when = Utilities.formatDate(start, CONFIG.TIMEZONE, 'M月d日（E）HH:mm');
-      MailApp.sendEmail(Session.getEffectiveUser().getEmail(), '【0→1】面談の予約が入りました：' + when, desc + (meetUrl ? '\n\nMeet：' + meetUrl : ''));
+      MailApp.sendEmail(CONFIG.NOTIFY_EMAIL, '【0→1】面談の予約が入りました：' + when, desc + (meetUrl ? '\n\nMeet：' + meetUrl : ''));
     }
     return json_({ ok: true, start: start.toISOString(), meetUrl: meetUrl });
   } catch (err) {
@@ -101,6 +105,44 @@ function doPost(e) {
   } finally {
     lock.releaseLock();
   }
+}
+
+/** 受講申し込みを受信し、運営者と申込者へメールを送信する。 */
+function receiveApplication_(p, name, email, tel, message) {
+  if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || p.agree !== true) {
+    return json_({ ok: false, error: 'invalid_input' });
+  }
+  const clean = function (value, limit) { return String(value || '').trim().slice(0, limit); };
+  const body = [
+    'お名前：' + name,
+    'メール：' + email,
+    '電話：' + (tel || '―'),
+    '入学希望月：' + (clean(p.month, 80) || '―'),
+    '現在の状況：' + (clean(p.status, 200) || '―'),
+    '目標：' + (Array.isArray(p.goals) ? p.goals.slice(0, 20).map(function (g) { return clean(g, 200); }).join('、') : '―'),
+    'ご相談内容：' + (message || '―'),
+    '規約等への同意：あり',
+    '（サイトの受講申し込みフォームから送信）'
+  ].join('\n');
+  MailApp.sendEmail({
+    to: CONFIG.NOTIFY_EMAIL,
+    replyTo: email,
+    subject: '【0→1】受講のお申し込み',
+    body: body
+  });
+  // 受信済みの申し込みを再送させないよう、確認メールだけの失敗は受理を取り消さない。
+  let confirmationSent = true;
+  try {
+    MailApp.sendEmail({
+      to: email,
+      replyTo: CONFIG.NOTIFY_EMAIL,
+      subject: '【0→1】お申し込みを受け付けました',
+      body: name + ' 様\n\nお申し込みありがとうございます。内容を確認し、受講契約の最終確認ページをメールでご案内します。\nこの時点では契約・お支払いは成立していません。\n\nお問い合わせ：hello@junkbranding.com\nJUNKBRANDING'
+    });
+  } catch (err) {
+    confirmationSent = false;
+  }
+  return json_({ ok: true, confirmationSent: confirmationSent });
 }
 
 /** Stripe Checkout のセッションを作成し、決済ページのURLを返す（{ ok: true, url: "https://checkout.stripe.com/..." }） */
@@ -188,4 +230,13 @@ function json_(obj) {
 /** 動作確認用：スクリプトエディタで実行すると、空き状況がログに出ます */
 function testListSlots() {
   Logger.log(JSON.stringify(listFreeSlots_(), null, 2));
+}
+
+/** 初回の権限承認用。メール送信・予定登録はしません。 */
+function authorizeServices() {
+  MailApp.getRemainingDailyQuota();
+  const calendar = CalendarApp.getCalendarById(CONFIG.CALENDAR_ID);
+  if (!calendar) { throw new Error('予約先カレンダーにアクセスできません。'); }
+  calendar.getName();
+  if (CONFIG.USE_MEET) { Calendar.CalendarList.get(CONFIG.CALENDAR_ID); }
 }

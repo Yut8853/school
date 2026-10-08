@@ -1,7 +1,8 @@
 # サーバー側の仕組み（Google Apps Script）
 
-この `Code.gs` は、次の2つを1つのウェブアプリで処理します。
+この `Code.gs` は、次の3つを1つのウェブアプリで処理します。
 
+- 受講申し込み：hello@junkbranding.comへ通知し、申込者へ受付メールを送信
 - 面談予約（Googleカレンダー連携）：このページで説明します
 - 受講料の決済（Stripe Checkout）：ZIPのいちばん上の `STRIPE_INTEGRATION_TODO.md` を見てください
 
@@ -12,7 +13,7 @@
 - 予約できるのは **毎日 19:00〜20:00 と 20:00〜21:00 の2枠だけ**（各1時間）です。
 - それ以外の時間は、すべて「予定あり」と表示されます。
 - 19時台・20時台でも、Googleカレンダーに予定（終日の予定を含む）が入っていれば「予定あり」になります。休みたい日は、カレンダーに終日の予定を入れてください。
-- 予約が入ると、factory0611@gmail.com のカレンダーに予定が作られ、申込者へ招待メール（Google Meet のURLつき）が届きます。講師にも通知メールが届きます。
+- 予約が入ると、factory0611@gmail.com のカレンダーに予定が作られ、申込者へ招待メール（Google Meet のURLつき）が届きます。hello@junkbranding.comにも通知メールが届きます。
 - 同じ枠に同時に申し込みがあっても、先に入った1件だけが確定します。
 
 メールアドレスはサイトには表示されません（このスクリプトの中だけで使います）。
@@ -28,7 +29,7 @@
    - アクセスできるユーザー：**全員**
 6. 表示された「ウェブアプリのURL」（`https://script.google.com/macros/s/……/exec`）をコピーします。
 7. そのURLを、次の場所に貼り付けます。
-   - 静的サイト（このZIP）：`apply.html` の `<form id="ap-form" … data-booking-endpoint="">` の `data-booking-endpoint`
+   - 静的サイト（このZIP）：`apply.html` の `<form id="ap-form" … data-booking-endpoint="">` の `data-booking-endpoint` **と** `data-endpoint` の両方（同じURL）
    - キャンバス（デザイン）：お申し込みページのロジックの `endpoint()` の戻り値
 
 ## 枠や条件を変えたいとき
@@ -44,3 +45,17 @@
 | `WEEKDAYS` | 毎日 | 受け付ける曜日（0=日〜6=土） |
 
 サイト側の表示（10時〜20時の枠を並べ、19時・20時以外を「予定あり」にする）も同じ考え方です。枠を変えたら、サイト側の表示も合わせて直します。
+
+## 2026-10-08：送信を有効にするために残っている設定
+
+コードの用意だけではメールは送信されません。Google側のウェブアプリ公開が必要です。
+
+1. 上記の手順で `Code.gs` を貼り付け、Google Calendar APIを追加。
+2. `authorizeServices` を実行し、カレンダーとメール送信の権限を許可。この関数はメール送信・予約登録を行いません。
+3. ウェブアプリとしてデプロイ（実行ユーザー：自分、アクセス：全員）。
+4. 発行された `/exec` で終わるURLを共有するか、apply.htmlの `data-endpoint` と `data-booking-endpoint` の両方に設定。
+5. サイトも公開し、申込通知がhello@junkbranding.comへ届くこと、申込者の受付メール、予約・招待を確認。
+
+送信元はApps Scriptを実行するGoogleアカウントです。通知先はhello@junkbranding.com、予約先カレンダーはfactory0611@gmail.comのままです。返信先は申込通知では申込者、受付メールではhello@junkbranding.comになります。
+
+受信処理の単体確認：`node --test scripts/booking.test.mjs`（Googleへの通信・実メール送信はしません）。
