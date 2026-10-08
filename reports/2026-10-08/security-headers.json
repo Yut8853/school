@@ -1,0 +1,265 @@
+{
+  "checkedAt": "2026-10-08T13:41:36+00:00",
+  "pages": [
+    {
+      "url": "https://school.junkbranding.com/apply.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/capstone.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/case.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/company.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/confirm.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/curriculum.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/instructor.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-a11y.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-cms.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-deploy.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-design.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-hearing.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-javascript.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-qa.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-responsive.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-seo.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson-ui.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/lesson.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/price.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/privacy.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/quality.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/terms.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/thanks.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/tokushoho.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    },
+    {
+      "url": "https://school.junkbranding.com/works.html",
+      "headers": {
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+      }
+    }
+  ]
+}

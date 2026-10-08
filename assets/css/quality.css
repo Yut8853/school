@@ -8,4 +8,11 @@
 .quality-scores dd{margin:4px 0 0;font-family:"Geist",sans-serif;font-size:36px;font-weight:700;line-height:1.2}
 .quality-report-links{display:flex;flex-wrap:wrap;gap:12px 24px}
 .quality-report-links a{display:inline-flex;align-items:center;min-height:44px}
+.quality-checks{grid-template-columns:minmax(0,1fr)}
+.quality-checks>li{display:block}
+.quality-checks .q-st{display:inline-block;margin-bottom:12px}
+.quality-checks p,.quality-checks a,.quality-headers{font-size:14px;overflow-wrap:anywhere}
+.quality-checks a{display:inline-flex;align-items:center;min-height:44px}
+.quality-headers{padding-left:1.25em}
+.quality-headers li{display:list-item;margin:6px 0;padding:0;border:0;border-radius:0;background:none}
 @media(max-width:600px){.quality-scores{grid-template-columns:repeat(2,minmax(0,1fr))}}

@@ -38,6 +38,9 @@ EVALUATION_PROMPT.md   他のAIに評価してもらうためのプロンプト
 
 ### PageSpeed 改善（2026-10-08）
 
+- 公開後の追加検査として、全26ページをaxe-core 4.13.0とNu HTML Checker 26.10.7で検査しました。文字コントラスト、表見出し、区画名、日時・SVG属性、記事の見出し構造を修正しています。品質ページに結果・対象範囲・手動確認が必要な項目を記載し、`reports/2026-10-08/axe.json`・`html-validation.json`・`security-headers.json` に記録しています。これらは特定時点の記録で、自動更新はしません。Safari・Firefox・実機・手動操作を確認済みと扱わないでください。
+- `vercel.json` にnosniff、フレーム埋め込み禁止、Referrer-Policy、限定的なCSPを追加しました。CSPはスクリプト実行元を制限していません。公開後のレスポンスヘッダーで確認済みです。計測レポートには `X-Robots-Tag: noindex` を設定しています。
+
 - 全26ページは `assets/css/generated/*.min.css` を読み込みます。`assets/css/` 直下のCSSが編集元で、`scripts/css-pages.json` に各ページで使うファイルと読み込み順を記録しています。HTML・CSS・JSを変更したら `npm ci`（初回）→ `npm run build` → `npm run check` を実行し、生成したCSSも公開してください。生成済みCSSを直接編集しないでください。
 - ビルドではページのHTMLとフォームのJSから未使用セレクタを除外し、最小化します。動的な状態クラスは明示的にも保護しています。新しい動的クラスを文字列の結合で作る場合は `scripts/build-css.mjs` の `safelist` へ追加してください。新規ページは `scripts/css-pages.json` に追加してください。
 - Google Fonts APIへのアクセスをなくし、`assets/fonts/` からフォントを配信します。768px以下では日本語を端末標準の書体で表示し、769px以上ではサイト内の文字に絞ったZen Kaku Gothic Newを使用します。英字はGeist / Geist Monoです。`font-display: optional` により、フォント取得が遅いときはフォールバックで表示を続けます。本文に新しい文字を追加したときの再生成手順・ライセンスは `assets/fonts/README.md` にあります。
