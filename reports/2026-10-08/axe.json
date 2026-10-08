@@ -6,7 +6,7 @@
   "scope": "Initial page state; all default axe-core rules; no form submissions or manual interaction",
   "pageCount": 26,
   "violationRules": 0,
-  "reviewElements": 620,
+  "reviewElements": 621,
   "pages": [
     {
       "url": "https://school.junkbranding.com/apply.html",
@@ -16617,7 +16617,7 @@
     },
     {
       "url": "https://school.junkbranding.com/quality.html",
-      "timestamp": "2026-10-08T13:41:41.427Z",
+      "timestamp": "2026-10-08T13:44:35.730Z",
       "testEnvironment": {
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
         "windowWidth": 756,
@@ -16731,6 +16731,31 @@
               "html": "<p>0→1で教えていることは、このサイトでも実践しています。公開サイトの計測結果と、品質を支える取り組みを掲載しています。</p>",
               "target": [
                 ".lg-head > .w > p"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a href=\"#measurement-results\">Chromeの測定結果と詳細レポートを見る</a>",
+              "target": [
+                "a[href$=\"#measurement-results\"]"
               ],
               "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },

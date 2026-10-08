@@ -256,15 +256,16 @@
     },
     {
       "url": "https://school.junkbranding.com/quality.html",
-      "sha256": "27423fcf4abd6b9423f66daf7963f21b1d1c92dbaefd3da6631a8ef746328f86",
-      "matchesLocal": true,
+      "sha256": "57f080ed5b8b021edcb1814e1f1ed6e68e5b98798826982071e7a42d66174997",
       "headers": {
         "strict-transport-security": "max-age=63072000",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "referrer-policy": "strict-origin-when-cross-origin",
         "content-security-policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
-      }
+      },
+      "recheckedAt": "2026-10-08T13:45:55+00:00",
+      "recheckMessages": []
     },
     {
       "url": "https://school.junkbranding.com/terms.html",
