@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "clean-css": "5.3.3",
+    "purgecss": "8.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-css.mjs",
+    "check": "node scripts/build-css.mjs --check && python3 scripts/check_metadata.py"
+  }
+}
