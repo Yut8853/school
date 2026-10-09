@@ -153,6 +153,24 @@
     "assets/css/responsive.css",
     "assets/css/blog.css"
   ],
+  "blog-acceptance-criteria.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-backup-before-edit.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-wireframe-priority.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
   "blog-design-spacing.html": [
     "assets/css/fonts.css",
     "assets/css/site.css",

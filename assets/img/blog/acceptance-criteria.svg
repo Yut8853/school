@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#F4E9DC"/>
+<circle cx="850" cy="50" r="220" fill="white" opacity=".35"/>
+<text x="48" y="54" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#282828">0→1 JOURNAL</text>
+<rect x="166" y="108" width="628" height="356" rx="16" fill="white" stroke="#222" stroke-width="2"/><text x="210" y="154" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#222">FIVE CHECKABLE OUTCOMES</text><g fill="none" stroke="#222" stroke-width="2"><rect x="212" y="184" width="28" height="28" rx="5"/><rect x="212" y="234" width="28" height="28" rx="5"/><rect x="212" y="284" width="28" height="28" rx="5"/><rect x="212" y="334" width="28" height="28" rx="5"/><rect x="212" y="384" width="28" height="28" rx="5"/></g><path d="m217 197 7 7 14-18m-21 61 7 7 14-18m-21 61 7 7 14-18" fill="none" stroke="#D34D25" stroke-width="4"/><path d="M267 199H671M267 249H623M267 299H657M267 349H611M267 399H639" stroke="#D5D5D5" stroke-width="12"/><circle cx="765" cy="406" r="48" fill="#EF663C"/><text x="765" y="423" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="white">5</text>
+<text x="48" y="550" font-family="Arial,sans-serif" font-size="34" font-weight="800" fill="#181818">DEFINE DONE</text>
+<text x="912" y="551" text-anchor="end" font-family="Arial,sans-serif" font-size="12" letter-spacing="1" fill="#444">08 / PROCESS</text>
+</svg>

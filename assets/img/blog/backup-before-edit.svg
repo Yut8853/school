@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#E7EEE8"/>
+<circle cx="850" cy="50" r="220" fill="white" opacity=".35"/>
+<text x="48" y="54" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#282828">0→1 JOURNAL</text>
+<g fill="white" stroke="#222" stroke-width="2"><rect x="96" y="150" width="280" height="270" rx="16"/><rect x="584" y="150" width="280" height="270" rx="16"/></g><g font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="#222"><text x="126" y="195">SAVED VERSION</text><text x="614" y="195">WORKING COPY</text></g><path d="M126 233H326M126 260H292M614 233H814M614 260H780" stroke="#aaa" stroke-width="10"/><rect x="126" y="296" width="220" height="88" rx="8" fill="#D6E4D8"/><path d="M185 339l20 20 42-42" stroke="#355C40" stroke-width="9" fill="none"/><rect x="614" y="296" width="220" height="88" rx="8" fill="#FFE3D7"/><path d="M405 228H548m-18-15 18 15-18 15" fill="none" stroke="#333" stroke-width="5"/><path d="M552 365H410m18-15-18 15 18 15" fill="none" stroke="#CF4B24" stroke-width="5"/><text x="480" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#A33616">RESTORE</text>
+<text x="48" y="550" font-family="Arial,sans-serif" font-size="34" font-weight="800" fill="#181818">KEEP A WAY BACK</text>
+<text x="912" y="551" text-anchor="end" font-family="Arial,sans-serif" font-size="12" letter-spacing="1" fill="#444">07 / RELEASE</text>
+</svg>
