@@ -1,0 +1,11 @@
+{
+  "slug": "explain-code",
+  "reviewedOn": "2026-10-10",
+  "topicReason": "1回目の3番目の候補。学習ガイド既存記事の制作企画と異なり、境界の入力に対する出力予測で短い処理の理解を確かめる。",
+  "factCheck": "MDNのArray.prototype.filter本文を2026-10-10に確認。新しい配列と空配列の説明を照合。学習手順は編集上の提案。",
+  "codeCheck": "原稿のJavaScriptを抽出してNode.jsで実行。通常入力、境界959/960/961、全件不一致、同値2件、厳密な大なりへの変更をassertで確認。",
+  "visualCheck": "Browserスキルで接続を試行したがNo browser is available、ブラウザー一覧も空。PC・スマートフォン表示、一覧・カテゴリ・検索0件・目次・リンク・コピーの実操作は未実施。",
+  "limitations": [
+    "ブラウザー接続先がなく、画面幅ごとの表示と実操作は未確認。"
+  ]
+}

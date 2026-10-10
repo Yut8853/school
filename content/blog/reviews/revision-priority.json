@@ -1,0 +1,11 @@
+{
+  "slug": "revision-priority",
+  "reviewedOn": "2026-10-10",
+  "topicReason": "blog:ideaの1回目の最初の候補。既存acceptance-criteriaは完成条件の定義、本記事は発見済みの不具合の着手順を影響と代替手段から選ぶ。2回目のpractice-feedbackは今回の問いと近いため見送り。",
+  "factCheck": "編集上の提案と架空案件の判断例のみ。実績や効果の数値は主張しない。リンク先レッスンの内容を確認。",
+  "codeCheck": "コード例なし。",
+  "visualCheck": "Browserスキルで接続を試行したがNo browser is available、ブラウザー一覧も空。PC・スマートフォン表示、一覧・カテゴリ・検索0件・目次・リンク・コピーの実操作は未実施。",
+  "limitations": [
+    "ブラウザー接続先がなく、画面幅ごとの表示と実操作は未確認。"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "form-label",
+  "reviewedOn": "2026-10-10",
+  "topicReason": "1回目の2番目の候補。既存publish-checklistの送信・受付確認では扱わない、入力欄一つの項目名とHTMLの関連付けに限定。",
+  "factCheck": "MDNのlabelとplaceholderの一次資料本文を2026-10-10に確認。for/id、idの一意性、ラベル操作、placeholderの用途を照合。サンプルは送信機能を持たないHTML断片。",
+  "codeCheck": "HTML断片をPython HTMLParserで解析し、修正例のfor/idの一致・idの一意性・labelの存在を検査。ブラウザーでのラベルクリック、Tab、読み上げは未実施。",
+  "visualCheck": "Browserスキルで接続を試行したがNo browser is available、ブラウザー一覧も空。PC・スマートフォン表示、一覧・カテゴリ・検索0件・目次・リンク・コピーの実操作は未実施。",
+  "limitations": [
+    "ブラウザー接続先がなく、画面幅ごとの表示と実操作は未確認。",
+    "入力欄のフォーカス移動とスクリーンリーダーでの読み上げは未確認。"
+  ]
+}

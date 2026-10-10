@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#F5EADB"/>
+<circle cx="850" cy="50" r="220" fill="white" opacity=".35"/>
+<g font-family="Arial,sans-serif" fill="#181818">
+<text x="48" y="54" font-size="15" font-weight="700" letter-spacing="3">0→1 JOURNAL</text>
+<g fill="white" stroke="#222" stroke-width="2"><rect x="92" y="115" width="230" height="330" rx="12"/><rect x="365" y="115" width="230" height="330" rx="12"/><rect x="638" y="115" width="230" height="330" rx="12"/></g>
+<g text-anchor="middle" font-size="22" font-weight="700"><text x="207" y="164">HOME</text><text x="480" y="164">ROOM</text><text x="753" y="164">PRICE</text></g>
+<path d="M126 210H288M126 242H265M399 210H561M399 242H538M672 210H834M672 242H811" stroke="#DBDEDC" stroke-width="12"/>
+<g fill="#EF663C"><rect x="124" y="294" width="166" height="52" rx="10"/><rect x="397" y="294" width="166" height="52" rx="10"/><rect x="670" y="294" width="166" height="52" rx="10"/></g>
+<g text-anchor="middle" font-size="17" font-weight="700"><text x="207" y="326">AVAILABILITY</text><text x="480" y="326">AVAILABILITY</text><text x="753" y="326">AVAILABILITY</text></g>
+<g fill="none" stroke="#222" stroke-width="2"><rect x="124" y="366" width="166" height="44" rx="10"/><rect x="397" y="366" width="166" height="44" rx="10"/><rect x="670" y="366" width="166" height="44" rx="10"/></g>
+<g text-anchor="middle" font-size="16"><text x="207" y="394">DETAILS</text><text x="480" y="394">DETAILS</text><text x="753" y="394">DETAILS</text></g>
+
+<text x="48" y="548" font-size="34" font-weight="800">ONE ROLE, ONE STYLE</text>
+<text x="912" y="580" text-anchor="end" font-size="12" letter-spacing="1">DESIGN</text>
+</g>
+</svg>

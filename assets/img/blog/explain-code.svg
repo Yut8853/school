@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#EEE8F4"/>
+<circle cx="850" cy="50" r="220" fill="white" opacity=".35"/>
+<g font-family="Arial,sans-serif" fill="#181818">
+<text x="48" y="54" font-size="15" font-weight="700" letter-spacing="3">0→1 JOURNAL</text>
+<g stroke="#222" stroke-width="2"><rect x="70" y="170" width="250" height="220" rx="14" fill="white"/><rect x="355" y="170" width="250" height="220" rx="14" fill="#EF663C"/><rect x="640" y="170" width="250" height="220" rx="14" fill="white"/></g>
+<g text-anchor="middle"><g font-size="19" font-weight="700"><text x="195" y="217">INPUT</text><text x="480" y="217">CONDITION</text><text x="765" y="217">OUTPUT</text></g>
+<text x="195" y="296" font-size="26">959, 960, 961</text><text x="480" y="301" font-size="38">≥ 960</text><text x="765" y="296" font-size="30">960, 961</text></g>
+<path d="M327 280H347m-9-8 9 8-9 8M612 280H632m-9-8 9 8-9 8" fill="none" stroke="#222" stroke-width="3"/>
+
+<text x="48" y="548" font-size="34" font-weight="800">PREDICT THEN RUN</text>
+<text x="912" y="580" text-anchor="end" font-size="12" letter-spacing="1">GUIDE</text>
+</g>
+</svg>
