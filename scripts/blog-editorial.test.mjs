@@ -6,8 +6,8 @@ import { join } from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { pickIdeas, seededRandom } from './blog-idea.mjs';
 const {topics}=JSON.parse(await readFile(new URL('../data/blog-topics.json',import.meta.url),'utf8'));
-test('catalog contains 30 distinct themes across 5 categories',()=>{
-  assert.equal(topics.length,30);assert.equal(new Set(topics.map(t=>t.id)).size,30);assert.equal(new Set(topics.map(t=>t.category)).size,5);
+test('catalog contains distinct themes across all seven categories',()=>{
+  assert.ok(topics.length>=30);assert.equal(new Set(topics.map(t=>t.id)).size,topics.length);assert.deepEqual(new Set(topics.map(t=>t.category)),new Set(['学習ガイド','HTML / CSS','JavaScript','アクセシビリティ','デザイン','公開・運用','制作の進め方']));
   for(const t of topics)assert.ok(t.question && t.exercise && t.audiences.length && t.formats.length);
 });
 test('seed reproduces selection; different seeds vary selection',()=>{
@@ -16,7 +16,7 @@ test('seed reproduces selection; different seeds vary selection',()=>{
   assert.ok(unique.size>15);
 });
 test('used and reserved draft topics are excluded',()=>{
-  const articles=topics.slice(0,28).map((t,i)=>({topicId:t.id,category:t.category,date:'2026-10-08',slug:t.id,draft:i%2===0}));
+  const articles=topics.slice(0,-2).map((t,i)=>({topicId:t.id,category:t.category,date:'2026-10-08',slug:t.id,draft:i%2===0}));
   const ideas=pickIdeas(topics,articles,seededRandom('reserve'));
   assert.equal(ideas.length,2);for(const idea of ideas)assert.ok(!articles.some(a=>a.topicId===idea.id));
   assert.deepEqual(pickIdeas(topics,topics.map(t=>({topicId:t.id,draft:true}))),[]);

@@ -14,7 +14,7 @@
 6. `npm run build && npm run test:blog && npm run check` を実行。
 7. 生成されたHTML、CSS、画像、`blog-feed.xml`、`sitemap.xml`を含めて公開します。
 
-カテゴリは「学習ガイド」「HTML / CSS」「デザイン」「公開・運用」「制作の進め方」です。増やす場合は `scripts/build-blog.mjs` の `categories` を編集します。`featured: true` の記事を一覧上部に表示します（複数ある場合は並び順の先頭）。記事の順序は公開日の降順、同日ならslug順です。
+カテゴリは「学習ガイド」「HTML / CSS」「JavaScript」「アクセシビリティ」「デザイン」「公開・運用」「制作の進め方」です。増やす場合は `scripts/build-blog.mjs` の `categories` を編集します。`featured: true` の記事を一覧上部に表示します（複数ある場合は並び順の先頭）。記事の順序は公開日の降順、同日ならslug順です。
 
 記事を削除したり `draft: true` にしたりしてビルドすると、この生成処理が所有する対応HTML・CSSも削除します。先頭に生成処理のコメントがないファイルは自動削除しません。
 

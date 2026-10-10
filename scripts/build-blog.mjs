@@ -7,7 +7,7 @@ const check = process.argv.includes('--check');
 const base = 'https://school.junkbranding.com';
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const plain = s => s.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
-const categories = ['学習ガイド', 'HTML / CSS', 'デザイン', '公開・運用', '制作の進め方'];
+const categories = ['学習ガイド', 'HTML / CSS', 'JavaScript', 'アクセシビリティ', 'デザイン', '公開・運用', '制作の進め方'];
 const source = await readFile('lesson.html', 'utf8');
 const shared = JSON.parse(source.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'].filter(n => ['EducationalOrganization','WebSite'].includes(n['@type']));
 const header = source.match(/<header class="hd">[\s\S]*?<\/header>/)[0];

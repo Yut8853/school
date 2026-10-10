@@ -169,7 +169,7 @@
     {
       "id": "focus-style",
       "title": "キーボードの現在位置を見せる",
-      "category": "HTML / CSS",
+      "category": "アクセシビリティ",
       "question": "フォーカスの枠を消すと何が起きるか",
       "exercise": "Tab操作でリンクの現在位置を確かめる",
       "audiences": [
@@ -449,6 +449,71 @@
       "formats": [
         "制作過程の解説",
         "判断基準の比較"
+      ]
+    },
+    {
+      "id": "js-dom-ready",
+      "title": "ボタンが反応しないとき、JavaScriptの読み込み順を確かめよう",
+      "category": "JavaScript",
+      "question": "HTMLにあるボタンをJavaScriptが見つけられないのはなぜか",
+      "exercise": "読み込み失敗・idの違い・実行順を切り分け、外部スクリプトをdeferで読み込める",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "失敗の直し方"
+      ]
+    },
+    {
+      "id": "js-text-output",
+      "title": "入力した文字をそのまま表示する、textContentの使い方",
+      "category": "JavaScript",
+      "question": "入力した文字をHTMLとして解釈させずに表示するには",
+      "exercise": "textContentで表示専用の要素を更新し、空欄とタグに似た文字を確認できる",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "小さな制作課題"
+      ]
+    },
+    {
+      "id": "js-number-input",
+      "title": "入力欄の数字で計算する前に、空欄と範囲を確認しよう",
+      "category": "JavaScript",
+      "question": "入力欄の値で計算するとき空欄や範囲外をどう扱うか",
+      "exercise": "数値を取り出して整数と範囲を確認し、不正な入力では結果を出さない",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説"
+      ]
+    },
+    {
+      "id": "image-alt",
+      "title": "画像のaltに何を書くか、ページでの役割から決めよう",
+      "category": "アクセシビリティ",
+      "question": "画像の説明を書く場合とaltを空にする場合をどう選ぶか",
+      "exercise": "画像の役割を説明し、情報・装飾・リンクに応じてaltの案を作れる",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "判断基準の比較"
+      ]
+    },
+    {
+      "id": "skip-link",
+      "title": "長いメニューを飛ばして本文へ進む、スキップリンクを作ろう",
+      "category": "アクセシビリティ",
+      "question": "共通メニューを毎回通らずに本文へ進めるようにするには",
+      "exercise": "本文へのリンクを先頭に置き、移動先と次のTab操作を確認できる",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説"
       ]
     }
   ]
