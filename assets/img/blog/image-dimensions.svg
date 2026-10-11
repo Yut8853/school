@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#EEE7DE"/>
+<circle cx="900" cy="30" r="225" fill="white" opacity=".4"/>
+<g font-family="Arial,sans-serif" fill="#181818">
+<text x="48" y="54" font-size="15" font-weight="700" letter-spacing="3">0→1 JOURNAL</text>
+<g fill="white"><rect x="90" y="128" width="350" height="320" rx="12"/><rect x="520" y="128" width="350" height="320" rx="12"/></g><rect x="115" y="155" width="300" height="200" rx="4" fill="none" stroke="#EF663C" stroke-width="3" stroke-dasharray="10 8"/><text x="193" y="251" font-size="32" font-weight="700">3 : 2</text><text x="163" y="293" font-size="19">SPACE RESERVED</text><rect x="545" y="155" width="300" height="200" rx="4" fill="#A5C6BB"/><path d="m546 318 91-108 73 70 47-52 88 87v40H545z" fill="#477B6C"/><circle cx="799" cy="198" r="22" fill="#F5DB94"/><path d="M115 384h300M115 413h215M545 384h300M545 413h215" stroke="#CEC9C0" stroke-width="11"/><path d="M448 257h62m-12-10 12 10-12 10" fill="none" stroke="#181818" stroke-width="3"/>
+<text x="48" y="548" font-size="32" font-weight="800">RESERVE SPACE BEFORE LOADING</text>
+<text x="912" y="580" text-anchor="end" font-size="12" letter-spacing="1">PRACTICE NOTES</text>
+</g></svg>

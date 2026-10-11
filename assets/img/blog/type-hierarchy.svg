@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#EEE8DA"/>
+<circle cx="900" cy="30" r="225" fill="white" opacity=".4"/>
+<g font-family="Arial,sans-serif" fill="#181818">
+<text x="48" y="54" font-size="15" font-weight="700" letter-spacing="3">0→1 JOURNAL</text>
+<rect x="120" y="118" width="720" height="350" rx="14" fill="white"/><text x="159" y="213" font-size="57" font-weight="800">EVENING STORIES</text><text x="163" y="294" font-size="35" font-weight="700">About the gathering</text><text x="165" y="347" font-size="23">Bring a story. Listen. Read together.</text><path d="M165 383h493M165 416h418" stroke="#D9D2C5" stroke-width="11"/><g fill="#EF663C"><circle cx="95" cy="193" r="9"/><circle cx="95" cy="283" r="9"/><circle cx="95" cy="339" r="9"/></g><path d="M95 206v62M95 297v28" stroke="#EF663C" stroke-width="3"/>
+<text x="48" y="548" font-size="32" font-weight="800">THREE ROLES FOR TYPE</text>
+<text x="912" y="580" text-anchor="end" font-size="12" letter-spacing="1">PRACTICE NOTES</text>
+</g></svg>

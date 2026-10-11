@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#E7ECE5"/>
+<circle cx="900" cy="30" r="225" fill="white" opacity=".4"/>
+<g font-family="Arial,sans-serif" fill="#181818">
+<text x="48" y="54" font-size="15" font-weight="700" letter-spacing="3">0→1 JOURNAL</text>
+<rect x="105" y="120" width="335" height="330" rx="14" fill="white"/><rect x="500" y="170" width="350" height="240" rx="14" fill="white"/><text x="139" y="167" font-size="22">REFERENCE</text><path d="M140 208h259M140 293h230M140 329h240M140 365h205M140 400h220" stroke="#C8D4CA" stroke-width="13"/><rect x="130" y="233" width="285" height="30" rx="5" fill="#EF663C"/><path d="M422 248h55v25h36" fill="none" stroke="#181818" stroke-width="3"/><text x="533" y="222" font-size="20">MY QUESTION</text><text x="533" y="271" font-size="30" font-weight="700">Where does it go?</text><path d="M536 315h269M536 346h205" stroke="#C8D4CA" stroke-width="12"/>
+<text x="48" y="548" font-size="32" font-weight="800">ONE QUESTION, ONE ANSWER</text>
+<text x="912" y="580" text-anchor="end" font-size="12" letter-spacing="1">PRACTICE NOTES</text>
+</g></svg>

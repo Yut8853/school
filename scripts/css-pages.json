@@ -153,6 +153,36 @@
     "assets/css/responsive.css",
     "assets/css/blog.css"
   ],
+  "blog-broken-link.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-image-dimensions.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-photo-crop.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-reading-documentation.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-type-hierarchy.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
   "blog-button-wording.html": [
     "assets/css/fonts.css",
     "assets/css/site.css",

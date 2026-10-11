@@ -1,0 +1,12 @@
+{
+  "slug": "type-hierarchy",
+  "reviewedOn": "2026-10-12",
+  "topicReason": "抽選一巡目の二番目。design-spacingは距離、wireframe-priorityは配置順を扱う。本記事は原稿と配置を固定して文字の役割と大きさを整理する。",
+  "factCheck": "編集上の練習案。数値は仮の比較条件と明記し、学習効果や利用者検証の実績を主張していない。",
+  "codeCheck": "コードなし。",
+  "visualCheck": "Browserスキルに従って接続を試みたがNo browser is available、利用可能一覧も空。PC・スマートフォンでの記事表示、一覧、カテゴリ、検索0件、目次、関連リンク、コードコピーの実操作は未実施。 表紙SVGはXML解析で960×600とviewBoxの整合を確認。表紙の描画も未実施。",
+  "limitations": [
+    "ブラウザーでの描画・操作と実機確認は未実施。",
+    "本番デプロイ後の内容一致は未確認。"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "image-dimensions",
+  "reviewedOn": "2026-10-12",
+  "topicReason": "二巡目の最初の候補。responsive-checkのはみ出し対策とは違い、読み込み前後の領域確保を扱う。photo-cropは固定枠内の構図であり、本記事は写真全体の縦横比を保つ。",
+  "factCheck": "本文リンク先のMDNを開き、sourcesの記載事項を確認。架空の案件と実際の動作確認を区別した。",
+  "codeCheck": "HTMLParserで画像断片のalt・1200×800の寸法を検査。CSSをCleanCSSで解析しエラー・警告なし。表示には別途写真とHTML文書が必要と本文に明記。ブラウザー描画・読み込み前後・トリミングの実行確認は未実施。",
+  "visualCheck": "Browserスキルに従って接続を試みたがNo browser is available、利用可能一覧も空。PC・スマートフォンでの記事表示、一覧、カテゴリ、検索0件、目次、関連リンク、コードコピーの実操作は未実施。 表紙SVGはXML解析で960×600とviewBoxの整合を確認。表紙の描画も未実施。",
+  "limitations": [
+    "ブラウザーでの描画・操作と実機確認は未実施。",
+    "本番デプロイ後の内容一致は未確認。"
+  ]
+}
