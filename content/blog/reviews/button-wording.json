@@ -1,0 +1,12 @@
+{
+  "slug": "button-wording",
+  "reviewedOn": "2026-10-11",
+  "topicReason": "初回抽選のpractice-feedbackはrevision-priorityと問い・手順が重なるため除外し、次のbutton-wordingを採用。consistent-componentsは見た目の共通化、html-link-buttonは要素選択、本記事は移動先と表示文言の照合を扱う。",
+  "factCheck": "2026-10-11にfrontmatter記載の一次資料本文を開いて確認。リンクの目的は文言単独、またはプログラムで判断できる文脈と合わせて特定できること。「こちら」を一律禁止する基準ではない。 架空例、編集上の提案、確認未実施の範囲を区別。",
+  "codeCheck": "実行するコードなし。 共通検証はnpm run build、npm run test:blog（18テスト、25ブログページのリンク・目次・ID・RSS）、npm run checkに成功。初回のCSSビルドはfast-globの関数読み込みエラーで停止したが、オンライン保存ファイルの読み込み後に同関数の動作を確認し、ビルドから全検証を再実行して成功。依存バージョンは変更していない。",
+  "visualCheck": "Browserスキルに従い接続を試行したがNo browser is available。利用可能ブラウザー一覧も空のため、PC・スマートフォン表示、一覧・カテゴリ・検索0件・目次・関連リンク・コードコピーのブラウザー操作は未実施。SVGはXML構文・寸法・外部参照なしを検査。 表紙はQuick Lookで一時プレビューを作成し、960×600の描画領域全体で図形・文字の重なりと切れがないことを目視確認。Quick Lookの矩形SVGサムネイルに切り取りが生じたため、元データを変更せず一時コピーへ下余白を追加して確認した。",
+  "limitations": [
+    "ブラウザー表示・操作と読み上げ環境での確認は未実施。",
+    "本番デプロイの内容一致は未確認。"
+  ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#DFE9E5"/>
+<circle cx="890" cy="35" r="230" fill="#fff" opacity=".4"/>
+<g font-family="Arial,sans-serif" fill="#181818">
+<text x="48" y="54" font-size="15" font-weight="700" letter-spacing="3">0→1 JOURNAL</text>
+<g fill="white" stroke="#222" stroke-width="2"><rect x="90" y="130" width="780" height="315" rx="14"/></g>
+<path d="M91 197h778" stroke="#222" stroke-width="2"/>
+<path d="M110 197v-45h234v45" fill="#EF663C" stroke="#222" stroke-width="2"/>
+<path d="M354 197v-45h234v45M598 197v-45h252v45" fill="#EAECE9" stroke="#222" stroke-width="2"/>
+<g text-anchor="middle" font-size="20" font-weight="700"><text x="227" y="181">VISIT | SHIORIDO</text><text x="471" y="181">SELL | SHIORIDO</text><text x="724" y="181">EVENT | SHIORIDO</text></g>
+<text x="138" y="267" font-size="28" font-weight="700">VISIT THE BOOKSHOP</text>
+<path d="M138 312h408M138 348h345M138 384h370" stroke="#D7DDD8" stroke-width="13"/>
+<g stroke="#222" stroke-width="3"><rect x="640" y="255" width="36" height="139" fill="#EF663C"/><rect x="683" y="279" width="36" height="115" fill="#E7C976"/><path d="m737 262 32-8 33 132-32 8z" fill="#A5C6BB"/></g>
+<text x="48" y="548" font-size="34" font-weight="800">A NAME FOR EVERY PAGE</text>
+<text x="912" y="580" text-anchor="end" font-size="12" letter-spacing="1">RELEASE</text>
+</g>
+</svg>

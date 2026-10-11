@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#E1EAF0"/>
+<circle cx="890" cy="35" r="230" fill="#fff" opacity=".4"/>
+<g font-family="Arial,sans-serif" fill="#181818">
+<text x="48" y="54" font-size="15" font-weight="700" letter-spacing="3">0→1 JOURNAL</text>
+<path d="M115 110h390a18 18 0 0 1 18 18v100a18 18 0 0 1-18 18H206l-52 34v-34h-39a18 18 0 0 1-18-18V128a18 18 0 0 1 18-18z" fill="white" stroke="#222" stroke-width="2"/>
+<text x="310" y="191" text-anchor="middle" font-size="34" font-weight="700">MAKE IT BETTER?</text>
+<path d="M561 179h190v91" fill="none" stroke="#222" stroke-width="3"/>
+<g fill="white" stroke="#222" stroke-width="2"><rect x="88" y="313" width="238" height="145" rx="14"/><rect x="361" y="313" width="238" height="145" rx="14"/><rect x="634" y="313" width="238" height="145" rx="14"/></g>
+<g fill="#EF663C"><circle cx="126" cy="350" r="18"/><circle cx="399" cy="350" r="18"/><circle cx="672" cy="350" r="18"/></g>
+<g text-anchor="middle" font-size="18" font-weight="700"><text x="126" y="356">1</text><text x="399" y="356">2</text><text x="672" y="356">3</text></g>
+<g text-anchor="middle" font-size="27" font-weight="700"><text x="207" y="412">PROBLEM</text><text x="480" y="412">READER</text><text x="753" y="412">NEXT STEP</text></g>
+<text x="48" y="548" font-size="34" font-weight="800">ASK BEFORE YOU DESIGN</text>
+<text x="912" y="580" text-anchor="end" font-size="12" letter-spacing="1">PROCESS</text>
+</g>
+</svg>

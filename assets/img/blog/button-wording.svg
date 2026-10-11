@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#F5EADB"/>
+<circle cx="890" cy="35" r="230" fill="#fff" opacity=".4"/>
+<g font-family="Arial,sans-serif" fill="#181818">
+<text x="48" y="54" font-size="15" font-weight="700" letter-spacing="3">0→1 JOURNAL</text>
+<rect x="90" y="110" width="780" height="350" rx="16" fill="white" stroke="#222" stroke-width="2"/>
+<g font-size="21" font-weight="700"><text x="125" y="154">BEFORE</text><text x="504" y="154">AFTER</text></g>
+<g fill="#ECEDEB"><rect x="125" y="188" width="225" height="58" rx="10"/><rect x="125" y="276" width="225" height="58" rx="10"/><rect x="125" y="364" width="225" height="58" rx="10"/></g>
+<g fill="#EF663C"><rect x="498" y="188" width="330" height="58" rx="10"/><rect x="498" y="276" width="330" height="58" rx="10"/><rect x="498" y="364" width="330" height="58" rx="10"/></g>
+<g font-size="22" text-anchor="middle" font-weight="700"><text x="237" y="225">MORE</text><text x="237" y="313">MORE</text><text x="237" y="401">MORE</text><text x="663" y="225">REPAIR PRICES</text><text x="663" y="313">FIND THE SHOP</text><text x="663" y="401">CHOOSE A DATE</text></g>
+<g fill="none" stroke="#222" stroke-width="4"><path d="M383 217h73l-14-14m14 14-14 14M383 305h73l-14-14m14 14-14 14M383 393h73l-14-14m14 14-14 14"/></g>
+<text x="48" y="548" font-size="34" font-weight="800">NAME THE NEXT STEP</text>
+<text x="912" y="580" text-anchor="end" font-size="12" letter-spacing="1">DESIGN</text>
+</g>
+</svg>
