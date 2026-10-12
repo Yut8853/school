@@ -10,10 +10,16 @@ test('catalog contains distinct themes across all seven categories',()=>{
   assert.ok(topics.length>=30);assert.equal(new Set(topics.map(t=>t.id)).size,topics.length);assert.deepEqual(new Set(topics.map(t=>t.category)),new Set(['学習ガイド','HTML / CSS','JavaScript','アクセシビリティ','デザイン','公開・運用','制作の進め方']));
   for(const t of topics)assert.ok(t.question && t.exercise && t.audiences.length && t.formats.length);
 });
-test('seed reproduces selection; different seeds vary selection',()=>{
-  assert.deepEqual(pickIdeas(topics,[],seededRandom('same')),pickIdeas(topics,[],seededRandom('same')));
-  const unique=new Set(Array.from({length:50},(_,i)=>pickIdeas(topics,[],seededRandom(String(i)))[0].id));
-  assert.ok(unique.size>15);
+test('editorial priorities select the first three topics regardless of seed',()=>{
+  const expected=['web-school-selection','web-production-roadmap','self-study-vs-school'];
+  for(const seed of ['same','different']) {
+    const ideas=pickIdeas([...topics].reverse(),[],seededRandom(seed));
+    assert.deepEqual(ideas.map(t=>t.id),expected);
+    for(const idea of ideas) {
+      assert.equal(idea.audience,idea.audiences[0]);
+      assert.equal(idea.format,idea.formats[0]);
+    }
+  }
 });
 test('used and reserved draft topics are excluded',()=>{
   const articles=topics.slice(0,-2).map((t,i)=>({topicId:t.id,category:t.category,date:'2026-10-08',slug:t.id,draft:i%2===0}));
@@ -21,15 +27,22 @@ test('used and reserved draft topics are excluded',()=>{
   assert.equal(ideas.length,2);for(const idea of ideas)assert.ok(!articles.some(a=>a.topicId===idea.id));
   assert.deepEqual(pickIdeas(topics,topics.map(t=>({topicId:t.id,draft:true}))),[]);
 });
-test('candidate categories differ when enough categories are available',()=>{
-  const ideas=pickIdeas(topics,[],seededRandom('variety'));
-  assert.equal(ideas.length,3);assert.equal(new Set(ideas.map(i=>i.category)).size,3);
+test('published and draft priority topics yield to the next editorial priorities',()=>{
+  const articles=[{topicId:'web-school-selection'},{topicId:'web-production-roadmap',draft:true}];
+  assert.deepEqual(pickIdeas(topics,articles).map(t=>t.id),[
+    'self-study-vs-school','web-school-pricing','web-sidejob-start'
+  ]);
 });
-test('less-covered categories are sampled more frequently',()=>{
+test('category frequency does not override explicit editorial priority',()=>{
   const articles=Array.from({length:18},(_,i)=>({category:'学習ガイド',date:'2026-10-08',slug:String(i)}));
-  let crowded=0;
-  for(let i=0;i<500;i++)if(pickIdeas(topics,articles,seededRandom(String(i)))[0].category==='学習ガイド')crowded++;
-  assert.ok(crowded<25,`crowded category selected ${crowded} times`);
+  assert.deepEqual(pickIdeas(topics,articles),pickIdeas(topics,[]));
+});
+test('priority ties use topic ids and missing priorities sort last without mutating input',()=>{
+  const make=(id,priority)=>({id,priority,audiences:['beginner'],formats:['guide']});
+  const input=[make('fallback'),make('beta',2),make('alpha',2),make('first',1)];
+  assert.deepEqual(pickIdeas(input,[]).map(t=>t.id),['first','alpha','beta']);
+  assert.deepEqual(pickIdeas(input,[{topicId:'first'}]).map(t=>t.id),['alpha','beta','fallback']);
+  assert.deepEqual(input.map(t=>t.id),['fallback','beta','alpha','first']);
 });
 
 async function fixture() {

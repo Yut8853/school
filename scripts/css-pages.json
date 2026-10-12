@@ -153,6 +153,30 @@
     "assets/css/responsive.css",
     "assets/css/blog.css"
   ],
+  "blog-self-study-vs-school.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-web-production-roadmap.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-web-school-pricing.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-web-school-selection.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
   "blog-broken-link.html": [
     "assets/css/fonts.css",
     "assets/css/site.css",
@@ -322,6 +346,48 @@
     "assets/css/blog.css"
   ],
   "blog-skip-link.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-category-learning.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-category-html-css.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-category-javascript.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-category-accessibility.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-category-design.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-category-publishing.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-category-workflow.html": [
     "assets/css/fonts.css",
     "assets/css/site.css",
     "assets/css/responsive.css",
