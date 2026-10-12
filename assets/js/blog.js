@@ -20,6 +20,12 @@ if (typeof document !== 'undefined') {
     const filters = [...document.querySelectorAll('[data-filter]')];
     const known = filters.map(b => b.dataset.filter);
     let category = '';
+    let indexPromise;
+    function loadIndex() {
+      if(!indexPromise) indexPromise=fetch('blog-search-index.json').then(r=>{if(!r.ok)throw new Error('Search index unavailable');return r.json();}).then(rows=>{const lookup=new Map(rows.map(row=>[row.slug,row.search]));cards.forEach(card=>card.dataset.search=lookup.get(card.dataset.slug)||card.textContent);}).catch(()=>{cards.forEach(card=>card.dataset.search ||= card.textContent || '');});
+      return indexPromise;
+    }
+    cards.forEach(card=>card.dataset.search ||= card.textContent || '');
     let page = 1;
     const pagination = document.querySelector('#blog-pagination');
     const heading = document.querySelector('#articles-title');
@@ -81,10 +87,11 @@ if (typeof document !== 'undefined') {
       document.querySelector('#articles').scrollIntoView({ block: 'start' });
     });
     filters.forEach(b => b.addEventListener('click', () => { category=b.dataset.filter; page=1; update(); }));
-    search.addEventListener('input', () => { page=1; update(); });
+    search.addEventListener('input', () => { const query=search.value; page=1; update(); if(query.trim() && typeof fetch === 'function')loadIndex().then(()=>{if(search.value===query)update(false);}); });
     document.querySelector('[data-reset]').addEventListener('click', () => { category=''; search.value=''; page=1; update(); search.focus(); });
     window.addEventListener('popstate', readUrl);
     readUrl();
+    if(search.value.trim() && typeof fetch === 'function')loadIndex().then(()=>update(false));
   }
   const status = document.querySelector('#blog-copy-status');
   async function copy(text, button) {

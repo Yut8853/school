@@ -14,7 +14,11 @@
       "formats": [
         "手順解説",
         "小さな制作課題"
-      ]
+      ],
+      "targetQuery": "学習メモを次の制作に使う",
+      "stage": "学習",
+      "experience": "",
+      "priority": 100
     },
     {
       "id": "reading-errors",
@@ -29,7 +33,11 @@
       "formats": [
         "失敗の直し方",
         "確認チェックリスト"
-      ]
+      ],
+      "targetQuery": "エラーメッセージの読み始め方",
+      "stage": "学習",
+      "experience": "",
+      "priority": 101
     },
     {
       "id": "small-scope",
@@ -44,7 +52,11 @@
       "formats": [
         "判断基準の比較",
         "制作過程の解説"
-      ]
+      ],
+      "targetQuery": "最初の制作物を小さくする",
+      "stage": "学習",
+      "experience": "",
+      "priority": 102
     },
     {
       "id": "practice-feedback",
@@ -59,7 +71,11 @@
       "formats": [
         "小さな制作課題",
         "手順解説"
-      ]
+      ],
+      "targetQuery": "フィードバックを次の課題に変える",
+      "stage": "学習",
+      "experience": "",
+      "priority": 103
     },
     {
       "id": "explain-code",
@@ -74,7 +90,11 @@
       "formats": [
         "確認チェックリスト",
         "失敗の直し方"
-      ]
+      ],
+      "targetQuery": "書いたコードを自分で説明する",
+      "stage": "学習",
+      "experience": "",
+      "priority": 104
     },
     {
       "id": "reading-documentation",
@@ -89,7 +109,11 @@
       "formats": [
         "制作過程の解説",
         "判断基準の比較"
-      ]
+      ],
+      "targetQuery": "公式ドキュメントの読み方",
+      "stage": "学習",
+      "experience": "",
+      "priority": 105
     },
     {
       "id": "heading-order",
@@ -104,7 +128,11 @@
       "formats": [
         "手順解説",
         "小さな制作課題"
-      ]
+      ],
+      "targetQuery": "見出しの順序を整える",
+      "stage": "学習",
+      "experience": "",
+      "priority": 106
     },
     {
       "id": "form-label",
@@ -119,7 +147,11 @@
       "formats": [
         "失敗の直し方",
         "確認チェックリスト"
-      ]
+      ],
+      "targetQuery": "フォームのラベルを付ける",
+      "stage": "学習",
+      "experience": "",
+      "priority": 107
     },
     {
       "id": "image-dimensions",
@@ -134,7 +166,11 @@
       "formats": [
         "判断基準の比較",
         "制作過程の解説"
-      ]
+      ],
+      "targetQuery": "画像の表示領域を先に確保する",
+      "stage": "学習",
+      "experience": "",
+      "priority": 108
     },
     {
       "id": "flex-min-width",
@@ -149,7 +185,11 @@
       "formats": [
         "小さな制作課題",
         "手順解説"
-      ]
+      ],
+      "targetQuery": "Flexbox内の長い文字を収める",
+      "stage": "学習",
+      "experience": "",
+      "priority": 109
     },
     {
       "id": "grid-columns",
@@ -164,7 +204,11 @@
       "formats": [
         "確認チェックリスト",
         "失敗の直し方"
-      ]
+      ],
+      "targetQuery": "カードの列数をCSS Gridで変える",
+      "stage": "学習",
+      "experience": "",
+      "priority": 110
     },
     {
       "id": "focus-style",
@@ -179,7 +223,11 @@
       "formats": [
         "制作過程の解説",
         "判断基準の比較"
-      ]
+      ],
+      "targetQuery": "キーボードの現在位置を見せる",
+      "stage": "学習",
+      "experience": "",
+      "priority": 111
     },
     {
       "id": "type-hierarchy",
@@ -194,7 +242,11 @@
       "formats": [
         "手順解説",
         "小さな制作課題"
-      ]
+      ],
+      "targetQuery": "文字の大きさで情報の順番を伝える",
+      "stage": "学習",
+      "experience": "",
+      "priority": 112
     },
     {
       "id": "color-contrast",
@@ -209,7 +261,11 @@
       "formats": [
         "失敗の直し方",
         "確認チェックリスト"
-      ]
+      ],
+      "targetQuery": "文字色と背景色を確認する",
+      "stage": "学習",
+      "experience": "",
+      "priority": 113
     },
     {
       "id": "button-wording",
@@ -224,7 +280,11 @@
       "formats": [
         "判断基準の比較",
         "制作過程の解説"
-      ]
+      ],
+      "targetQuery": "ボタンの言葉を具体的にする",
+      "stage": "学習",
+      "experience": "",
+      "priority": 114
     },
     {
       "id": "photo-crop",
@@ -239,7 +299,11 @@
       "formats": [
         "小さな制作課題",
         "手順解説"
-      ]
+      ],
+      "targetQuery": "写真の切り抜き位置を決める",
+      "stage": "学習",
+      "experience": "",
+      "priority": 115
     },
     {
       "id": "wireframe-priority",
@@ -254,7 +318,11 @@
       "formats": [
         "確認チェックリスト",
         "失敗の直し方"
-      ]
+      ],
+      "targetQuery": "ワイヤーフレームで情報の優先順位を決める",
+      "stage": "学習",
+      "experience": "",
+      "priority": 116
     },
     {
       "id": "consistent-components",
@@ -269,7 +337,11 @@
       "formats": [
         "制作過程の解説",
         "判断基準の比較"
-      ]
+      ],
+      "targetQuery": "同じ役割のUIをそろえる",
+      "stage": "学習",
+      "experience": "",
+      "priority": 117
     },
     {
       "id": "broken-link",
@@ -284,7 +356,11 @@
       "formats": [
         "手順解説",
         "小さな制作課題"
-      ]
+      ],
+      "targetQuery": "リンク切れを見つけて直す",
+      "stage": "実務",
+      "experience": "",
+      "priority": 118
     },
     {
       "id": "page-title",
@@ -299,7 +375,11 @@
       "formats": [
         "失敗の直し方",
         "確認チェックリスト"
-      ]
+      ],
+      "targetQuery": "ページごとのtitleを付ける",
+      "stage": "実務",
+      "experience": "",
+      "priority": 119
     },
     {
       "id": "ogp-preview",
@@ -314,7 +394,11 @@
       "formats": [
         "判断基準の比較",
         "制作過程の解説"
-      ]
+      ],
+      "targetQuery": "共有時のタイトルと画像を整える",
+      "stage": "実務",
+      "experience": "",
+      "priority": 120
     },
     {
       "id": "image-weight",
@@ -329,7 +413,11 @@
       "formats": [
         "小さな制作課題",
         "手順解説"
-      ]
+      ],
+      "targetQuery": "画像の容量を見直す",
+      "stage": "実務",
+      "experience": "",
+      "priority": 121
     },
     {
       "id": "update-check",
@@ -344,7 +432,11 @@
       "formats": [
         "確認チェックリスト",
         "失敗の直し方"
-      ]
+      ],
+      "targetQuery": "更新後に確認する範囲を決める",
+      "stage": "実務",
+      "experience": "",
+      "priority": 122
     },
     {
       "id": "backup-before-edit",
@@ -359,7 +451,11 @@
       "formats": [
         "制作過程の解説",
         "判断基準の比較"
-      ]
+      ],
+      "targetQuery": "更新前に戻せる状態を作る",
+      "stage": "実務",
+      "experience": "",
+      "priority": 123
     },
     {
       "id": "request-questions",
@@ -374,7 +470,11 @@
       "formats": [
         "手順解説",
         "小さな制作課題"
-      ]
+      ],
+      "targetQuery": "曖昧な依頼を質問に変える",
+      "stage": "実務",
+      "experience": "",
+      "priority": 124
     },
     {
       "id": "acceptance-criteria",
@@ -389,7 +489,11 @@
       "formats": [
         "失敗の直し方",
         "確認チェックリスト"
-      ]
+      ],
+      "targetQuery": "完成の条件を先に決める",
+      "stage": "実務",
+      "experience": "",
+      "priority": 125
     },
     {
       "id": "review-request",
@@ -404,7 +508,11 @@
       "formats": [
         "判断基準の比較",
         "制作過程の解説"
-      ]
+      ],
+      "targetQuery": "レビューで見てほしい点を伝える",
+      "stage": "実務",
+      "experience": "",
+      "priority": 126
     },
     {
       "id": "revision-priority",
@@ -419,7 +527,11 @@
       "formats": [
         "小さな制作課題",
         "手順解説"
-      ]
+      ],
+      "targetQuery": "修正の優先順位を付ける",
+      "stage": "実務",
+      "experience": "",
+      "priority": 127
     },
     {
       "id": "handover-note",
@@ -434,7 +546,11 @@
       "formats": [
         "確認チェックリスト",
         "失敗の直し方"
-      ]
+      ],
+      "targetQuery": "公開後に渡す更新メモを作る",
+      "stage": "実務",
+      "experience": "",
+      "priority": 128
     },
     {
       "id": "content-inventory",
@@ -449,7 +565,11 @@
       "formats": [
         "制作過程の解説",
         "判断基準の比較"
-      ]
+      ],
+      "targetQuery": "制作前に必要な原稿を洗い出す",
+      "stage": "実務",
+      "experience": "",
+      "priority": 129
     },
     {
       "id": "js-dom-ready",
@@ -462,7 +582,11 @@
       ],
       "formats": [
         "失敗の直し方"
-      ]
+      ],
+      "targetQuery": "ボタンが反応しないとき、JavaScriptの読み込み順を確かめよう",
+      "stage": "学習",
+      "experience": "",
+      "priority": 130
     },
     {
       "id": "js-text-output",
@@ -475,7 +599,11 @@
       ],
       "formats": [
         "小さな制作課題"
-      ]
+      ],
+      "targetQuery": "入力した文字をそのまま表示する、textContentの使い方",
+      "stage": "学習",
+      "experience": "",
+      "priority": 131
     },
     {
       "id": "js-number-input",
@@ -488,7 +616,11 @@
       ],
       "formats": [
         "手順解説"
-      ]
+      ],
+      "targetQuery": "入力欄の数字で計算する前に、空欄と範囲を確認しよう",
+      "stage": "学習",
+      "experience": "",
+      "priority": 132
     },
     {
       "id": "image-alt",
@@ -501,7 +633,11 @@
       ],
       "formats": [
         "判断基準の比較"
-      ]
+      ],
+      "targetQuery": "画像のaltに何を書くか、ページでの役割から決めよう",
+      "stage": "学習",
+      "experience": "",
+      "priority": 133
     },
     {
       "id": "skip-link",
@@ -514,7 +650,191 @@
       ],
       "formats": [
         "手順解説"
-      ]
+      ],
+      "targetQuery": "長いメニューを飛ばして本文へ進む、スキップリンクを作ろう",
+      "stage": "学習",
+      "experience": "",
+      "priority": 134
+    },
+    {
+      "id": "web-school-selection",
+      "title": "Web制作スクールの選び方",
+      "category": "学習ガイド",
+      "question": "Web制作スクールの選び方で何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "Web制作スクール 選び方",
+      "stage": "検討",
+      "experience": "",
+      "priority": 1
+    },
+    {
+      "id": "web-production-roadmap",
+      "title": "ホームページ制作を学ぶロードマップ",
+      "category": "学習ガイド",
+      "question": "ホームページ制作を学ぶロードマップで何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "ホームページ制作 ロードマップ",
+      "stage": "学習",
+      "experience": "",
+      "priority": 2
+    },
+    {
+      "id": "self-study-vs-school",
+      "title": "Web制作の独学とスクールを比較する",
+      "category": "学習ガイド",
+      "question": "Web制作の独学とスクールを比較するで何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "Web制作 独学 スクール 比較",
+      "stage": "検討",
+      "experience": "",
+      "priority": 3
+    },
+    {
+      "id": "web-school-pricing",
+      "title": "Web制作スクールの料金を比較する",
+      "category": "学習ガイド",
+      "question": "Web制作スクールの料金を比較するで何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "Web制作スクール 料金 相場",
+      "stage": "検討",
+      "experience": "",
+      "priority": 4
+    },
+    {
+      "id": "web-sidejob-start",
+      "title": "Web制作で副業を始める手順",
+      "category": "学習ガイド",
+      "question": "Web制作で副業を始める手順で何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "Web制作 副業 始め方",
+      "stage": "学習",
+      "experience": "",
+      "priority": 5
+    },
+    {
+      "id": "web-career-beginner",
+      "title": "未経験からWeb制作を仕事にするには",
+      "category": "学習ガイド",
+      "question": "未経験からWeb制作を仕事にするにはで何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "未経験 Web制作 仕事",
+      "stage": "検討",
+      "experience": "",
+      "priority": 6
+    },
+    {
+      "id": "web-design-vs-production",
+      "title": "WebデザインとWeb制作スクールの違い",
+      "category": "学習ガイド",
+      "question": "WebデザインとWeb制作スクールの違いで何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "Webデザイン Web制作 スクール 違い",
+      "stage": "検討",
+      "experience": "",
+      "priority": 7
+    },
+    {
+      "id": "web-career-midlife",
+      "title": "社会人からWeb制作を学ぶ方法",
+      "category": "学習ガイド",
+      "question": "社会人からWeb制作を学ぶ方法で何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "40代 Web制作 学習",
+      "stage": "検討",
+      "experience": "",
+      "priority": 8
+    },
+    {
+      "id": "web-production-ai",
+      "title": "AI時代のWeb制作の仕事",
+      "category": "制作の進め方",
+      "question": "AI時代のWeb制作の仕事で何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "Web制作 AI 将来性",
+      "stage": "検討",
+      "experience": "",
+      "priority": 9
+    },
+    {
+      "id": "web-client-workflow",
+      "title": "Web制作のヒアリングから納品まで",
+      "category": "制作の進め方",
+      "question": "Web制作のヒアリングから納品までで何に注意すべきか",
+      "exercise": "具体的な条件を整理して比較する",
+      "audiences": [
+        "完全未経験"
+      ],
+      "formats": [
+        "判断基準の比較",
+        "手順解説"
+      ],
+      "targetQuery": "Web制作 仕事 流れ",
+      "stage": "実務",
+      "experience": "",
+      "priority": 10
     }
   ]
 }

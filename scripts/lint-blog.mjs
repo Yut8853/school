@@ -25,6 +25,8 @@ for(const filename of (await readdir('content/blog')).filter(f=>f.endsWith('.md'
     assert(formats.has(meta.format),'記事の型が不正');
     assert(meta.date<=today,'未来日の記事を公開しない');
     if(meta.updated)assert(validDate(meta.updated)&&meta.updated>=meta.date&&meta.updated<=today,'更新日が不正');
+    if(meta.targetQuery) assert(meta.title?.includes(meta.targetQuery),'titleにtargetQueryを自然に含める');
+    if(meta.author==='instructor')assert(meta.instructorReviewed===true,'講師名義には講師本人のレビューが必要');
     assert(meta.title?.length>=15&&meta.title?.length<=65,'タイトルは15〜65文字');
     assert(meta.description?.length>=50&&meta.description?.length<=140,'descriptionは50〜140文字');
     const text=body.replace(/```[\s\S]*?```/g,'').replace(/https?:\/\/[^\s)]+/g,'').replace(/\s/g,'');

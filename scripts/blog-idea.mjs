@@ -11,24 +11,11 @@ export function seededRandom(seed) {
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 }
-export function pickIdeas(topics, articles, random = () => randomInt(0x100000000) / 0x100000000) {
-  const used = new Set(articles.map(a=>a.topicId).filter(Boolean));
-  const counts = new Map();
-  articles.filter(a=>!a.draft).forEach(a=>counts.set(a.category,(counts.get(a.category)||0)+1));
-  const recent = articles.filter(a=>!a.draft).slice().sort((a,b)=>b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug)).slice(0,2).map(a=>a.category);
-  let available = topics.filter(t=>!used.has(t.id));
-  const result = [];
-  while(available.length && result.length<3) {
-    const weights=available.map(t=>(recent.includes(t.category)?0.3:1)/(1+(counts.get(t.category)||0)));
-    let value=random()*weights.reduce((a,b)=>a+b,0), index=weights.length-1;
-    for(let i=0;i<weights.length;i++){value-=weights[i];if(value<0){index=i;break;}}
-    const [topic]=available.splice(index,1);
-    result.push({...topic,audience:topic.audiences[Math.floor(random()*topic.audiences.length)],format:topic.formats[Math.floor(random()*topic.formats.length)]});
-    // Prefer variety in the candidate set; don't repeat a category while alternatives remain.
-    const others=available.filter(t=>!result.some(r=>r.category===t.category));
-    if(others.length) available=others;
-  }
-  return result;
+export function pickIdeas(topics, articles, random = Math.random) {
+  const used = new Set(articles.map(a => a.topicId).filter(Boolean));
+  return topics.filter(t => !used.has(t.id))
+    .sort((a,b) => (a.priority ?? 1000)-(b.priority ?? 1000) || a.id.localeCompare(b.id))
+    .slice(0,3).map(t => ({...t,audience:t.audiences[0],format:t.formats[0]}));
 }
 async function main() {
   process.chdir(fileURLToPath(new URL('../',import.meta.url)));
