@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#FBFAF8"/>
+<g font-family="Arial, sans-serif" fill="#191919">
+<text x="56" y="64" font-size="20" letter-spacing="3">0 → 1 / LEARNING NOTES</text>
+<text x="56" y="132" font-size="44" font-weight="700">Generate. Check. Decide.</text>
+<rect x="65" y="220" width="285" height="260" rx="14" fill="#DCE9E6" stroke="#191919" stroke-width="3"/><text x="96" y="271" font-size="25">GENERATED IDEA</text><path d="M95 315H316M95 354H295M95 393H316M95 432H254" stroke="#191919" stroke-width="6"/><path d="M370 350H456m-20-15 20 15-20 15" fill="none" stroke="#191919" stroke-width="5"/><rect x="485" y="220" width="410" height="260" rx="14" fill="white" stroke="#191919" stroke-width="3"/><g font-size="24"><text x="517" y="270">CHECK AGAINST THE BRIEF</text><text x="564" y="329">FACTS</text><text x="564" y="390">ACTIONS</text><text x="564" y="450">REASONS</text></g><g fill="#FF6B35"><circle cx="532" cy="321" r="15"/><circle cx="532" cy="382" r="15"/><circle cx="532" cy="442" r="15"/></g>
+<text x="56" y="550" font-size="18" letter-spacing="2">CLAIM / SOURCE / DECISION</text>
+</g></svg>
