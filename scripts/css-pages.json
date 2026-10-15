@@ -153,6 +153,42 @@
     "assets/css/responsive.css",
     "assets/css/blog.css"
   ],
+  "blog-flex-min-width.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-heading-order.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-learning-log.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-practice-feedback.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-reading-errors.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
+  "blog-small-scope.html": [
+    "assets/css/fonts.css",
+    "assets/css/site.css",
+    "assets/css/responsive.css",
+    "assets/css/blog.css"
+  ],
   "blog-web-career-beginner.html": [
     "assets/css/fonts.css",
     "assets/css/site.css",

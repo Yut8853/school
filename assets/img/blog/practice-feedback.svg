@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#e7eef3"/><circle cx="875" cy="35" r="200" fill="white" opacity=".4"/>
+<g font-family="Arial, sans-serif" fill="#181818"><text x="48" y="55" font-size="16" font-weight="700" letter-spacing="3">0→1 JOURNAL</text>
+<rect x="75" y="175" width="230" height="235" rx="16" fill="white"/><rect x="365" y="175" width="230" height="235" rx="16" fill="#EF663C"/><rect x="655" y="175" width="230" height="235" rx="16" fill="white"/><text x="105" y="225" font-size="22">COMMENT</text><text x="400" y="225" font-size="22">REASON</text><text x="690" y="225" font-size="22">NEW CASE</text><path d="M110 280h160m-160 35h130m-130 35h150M690 280h150m-150 35h115m-115 35h150" stroke="#333" stroke-width="9"/><text x="455" y="350" font-size="80">?</text><path d="M315 295h38m-13-12 13 12-13 12M605 295h38m-13-12 13 12-13 12" stroke="#333" stroke-width="4" fill="none"/>
+<text x="48" y="535" font-size="30" font-weight="700">TRY A DIFFERENT CASE</text><text x="910" y="577" text-anchor="end" font-size="13">LEARNING NOTES</text></g></svg>
