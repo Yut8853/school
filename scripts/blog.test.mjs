@@ -81,7 +81,7 @@ test('pagination UI restores URL state, resets filters, and supports browser his
   const nav = nodes['#blog-pagination'];
   assert.deepEqual(visible(), [6, 7, 8]);
   assert.equal(nodes['#blog-count'].textContent, '9件中 7–9件');
-  assert.equal(nav.children.find(c => c.textContent === '2').attributes['aria-current'], 'page');
+  assert.equal(nav.children.find(c => c.className === 'blog-pagination-numbers').children.find(c => c.textContent === '2').attributes['aria-current'], 'page');
   const clickPage = label => nav.listeners.click({ target: nav.children.find(c => c.textContent === label), button: 0, preventDefault() {} });
   clickPage('前へ');
   assert.equal(visible().length, 6);

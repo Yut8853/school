@@ -48,10 +48,14 @@ if (typeof document !== 'undefined') {
       pagination.replaceChildren();
       pagination.hidden = result.pageCount <= 1;
       if (!pagination.hidden) {
+        const numbers = document.createElement('div');
+        numbers.className = 'blog-pagination-numbers';
         function addLink(label, targetPage, current = false) {
           const unavailable = targetPage < 1 || targetPage > result.pageCount;
           const control = document.createElement(unavailable || current ? 'span' : 'a');
           control.textContent = label;
+          control.className = /^\d+$/.test(label) ? 'blog-page-number' :
+            `blog-page-direction ${targetPage < page ? 'blog-page-prev' : 'blog-page-next'}`;
           if (current) control.setAttribute('aria-current', 'page');
           else if (unavailable) control.setAttribute('aria-disabled', 'true');
           else {
@@ -61,10 +65,11 @@ if (typeof document !== 'undefined') {
             control.dataset.page = targetPage;
           }
           if (/^\d+$/.test(label)) control.setAttribute('aria-label', `${label}ページ目`);
-          pagination.append(control);
+          (/^\d+$/.test(label) ? numbers : pagination).append(control);
         }
         addLink('前へ', page - 1);
         for (let i = 1; i <= result.pageCount; i++) addLink(String(i), i, i === page);
+        pagination.append(numbers);
         addLink('次へ', page + 1);
       }
       if(writeUrl) history.replaceState(null, '', pageUrl(page));
