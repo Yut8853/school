@@ -13,6 +13,19 @@ export function paginatePosts(posts, requestedPage = 1) {
   const offset = (page - 1) * 6;
   return { items: posts.slice(offset, offset + 6), total, page, pageCount, start: total ? offset + 1 : 0, end: Math.min(offset + 6, total) };
 }
+export function paginationItems(page, pageCount) {
+  if (pageCount <= 5) return Array.from({ length: pageCount }, (_, i) => i + 1);
+  const visible = new Set([1, pageCount]);
+  const start = Math.max(2, Math.min(page - 1, pageCount - 2));
+  const end = Math.min(pageCount - 1, Math.max(page + 1, 3));
+  for (let i = start; i <= end; i++) visible.add(i);
+  const items = [];
+  for (const value of [...visible].sort((a, b) => a - b)) {
+    if (items.length && value - items.at(-1) > 1) items.push('…');
+    items.push(value);
+  }
+  return items;
+}
 if (typeof document !== 'undefined') {
   const search = document.querySelector('#blog-search');
   if (search) {
@@ -68,7 +81,16 @@ if (typeof document !== 'undefined') {
           (/^\d+$/.test(label) ? numbers : pagination).append(control);
         }
         addLink('前へ', page - 1);
-        for (let i = 1; i <= result.pageCount; i++) addLink(String(i), i, i === page);
+        for (const item of paginationItems(page, result.pageCount)) {
+          if (typeof item === 'number') addLink(String(item), item, item === page);
+          else {
+            const gap = document.createElement('span');
+            gap.className = 'blog-page-gap';
+            gap.textContent = item;
+            gap.setAttribute('aria-hidden', 'true');
+            numbers.append(gap);
+          }
+        }
         pagination.append(numbers);
         addLink('次へ', page + 1);
       }

@@ -23,7 +23,23 @@ test('HTML and regular expressions are treated as literal search text', () => {
 });
 test('whitespace-only queries do not hide cards', () => assert.equal(matchesPost(post, '\n　 ', ''), true));
 
-const { paginatePosts } = await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`);
+const { paginatePosts, paginationItems } = await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`);
+test('page numbers stay compact at the beginning, middle and end', () => {
+  assert.deepEqual(paginationItems(1, 5), [1, 2, 3, 4, 5]);
+  assert.deepEqual(paginationItems(1, 10), [1, 2, 3, '…', 10]);
+  assert.deepEqual(paginationItems(5, 10), [1, '…', 4, 5, 6, '…', 10]);
+  assert.deepEqual(paginationItems(10, 10), [1, '…', 8, 9, 10]);
+  for (const count of [6, 10, 100]) for (let page = 1; page <= count; page++) {
+    const items = paginationItems(page, count);
+    const numbers = items.filter(item => typeof item === 'number');
+    assert.ok(numbers.includes(page));
+    assert.equal(numbers[0], 1);
+    assert.equal(numbers.at(-1), count);
+    assert.ok(numbers.length <= 5);
+    assert.ok(items.length <= 7);
+    assert.equal(new Set(numbers).size, numbers.length);
+  }
+});
 const ninePosts = Array.from({ length: 9 }, (_, id) => ({ id, category: id % 2 ? 'デザイン' : 'HTML / CSS', search: `記事 ${id}` }));
 test('nine articles paginate into six and three without omissions or duplicates', () => {
   const first = paginatePosts(ninePosts);
