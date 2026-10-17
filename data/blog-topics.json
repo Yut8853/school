@@ -835,6 +835,186 @@
       "stage": "実務",
       "experience": "",
       "priority": 10
+    },
+    {
+      "id": "box-sizing",
+      "title": "box-sizingで幅をそろえる",
+      "category": "HTML / CSS",
+      "question": "余白を足した箱が指定幅を超えるのはなぜか",
+      "exercise": "同じ幅の箱で内側余白の有無を比較する",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "box-sizingで幅をそろえる",
+      "stage": "学習",
+      "experience": "",
+      "priority": 127
+    },
+    {
+      "id": "table-headers",
+      "title": "HTMLの表に見出しを付ける",
+      "category": "アクセシビリティ",
+      "question": "表の数値が何を表すかを構造でどう伝えるか",
+      "exercise": "行と列の見出しを持つ時間割を作る",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "HTMLの表に見出しを付ける",
+      "stage": "学習",
+      "experience": "",
+      "priority": 128
+    },
+    {
+      "id": "fieldset-legend",
+      "title": "ラジオボタンをfieldsetでまとめる",
+      "category": "アクセシビリティ",
+      "question": "選択肢全体への質問と各選択肢をどう関連付けるか",
+      "exercise": "二つの質問を別グループにする",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "ラジオボタンをfieldsetでまとめる",
+      "stage": "学習",
+      "experience": "",
+      "priority": 129
+    },
+    {
+      "id": "js-filter-empty",
+      "title": "JavaScriptのfilterで一覧を絞る",
+      "category": "JavaScript",
+      "question": "一致するデータがない場合をどう判定するか",
+      "exercise": "全件・一致・0件の三条件を確かめる",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "JavaScriptのfilterで一覧を絞る",
+      "stage": "学習",
+      "experience": "",
+      "priority": 130
+    },
+    {
+      "id": "reduced-motion",
+      "title": "動きを減らす設定にCSSで対応する",
+      "category": "アクセシビリティ",
+      "question": "動きを望まない環境で装飾アニメーションをどう扱うか",
+      "exercise": "静止を基本にして希望がない場合だけ動かす",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "動きを減らす設定にCSSで対応する",
+      "stage": "学習",
+      "experience": "",
+      "priority": 131
+    },
+    {
+      "id": "bug-reproduction",
+      "title": "不具合の再現手順を書く",
+      "category": "制作の進め方",
+      "question": "別の人が同じ現象を試せる記録には何が必要か",
+      "exercise": "開始状態と操作と結果を三段階で書く",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "不具合の再現手順を書く",
+      "stage": "学習",
+      "experience": "",
+      "priority": 132
+    },
+    {
+      "id": "css-specificity",
+      "title": "CSSが効かないとき適用元を探す",
+      "category": "HTML / CSS",
+      "question": "上書きされた指定をどう調べるか",
+      "exercise": "適用済みの宣言と打ち消された宣言を比較する",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "CSSが効かないとき適用元を探す",
+      "stage": "学習",
+      "experience": "",
+      "priority": 133
+    },
+    {
+      "id": "details-summary",
+      "title": "detailsで補足を開閉する",
+      "category": "HTML / CSS",
+      "question": "補足を標準の要素で開閉するには",
+      "exercise": "見出しと内容のある補足を作る",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "detailsで補足を開閉する",
+      "stage": "学習",
+      "experience": "",
+      "priority": 134
+    },
+    {
+      "id": "js-array-sort",
+      "title": "配列を並べ替える前に元データを残す",
+      "category": "JavaScript",
+      "question": "並べ替えで元の順序を失わない方法は",
+      "exercise": "二種類の並びを別の配列として扱う",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "配列を並べ替える前に元データを残す",
+      "stage": "学習",
+      "experience": "",
+      "priority": 135
+    },
+    {
+      "id": "empty-state-copy",
+      "title": "一覧が空のときの案内を書く",
+      "category": "デザイン",
+      "question": "まだ登録がない状態と検索0件をどう区別するか",
+      "exercise": "空の理由と次の操作を一組にする",
+      "audiences": [
+        "HTML・CSSを少し書ける"
+      ],
+      "formats": [
+        "手順解説",
+        "小さな制作課題"
+      ],
+      "targetQuery": "一覧が空のときの案内を書く",
+      "stage": "学習",
+      "experience": "",
+      "priority": 136
     }
   ]
 }

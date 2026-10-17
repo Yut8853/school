@@ -1,0 +1,11 @@
+{
+  "slug": "review-request",
+  "reviewedOn": "2026-10-17",
+  "topicReason": "既存のポートフォリオ記事は成果の紹介、フィードバック記事は指摘を受けた後。本記事は確認前の依頼文を完成物にする。 7本指定を優先して同日公開。実務の実績ではなく学習用の題材として執筆。候補web-client-workflowは講師確認済み実例がなく範囲も広いため保留。",
+  "factCheck": "編集部による記録方法の提案。実案件や講師の経験、測定された効果を主張していない。",
+  "codeCheck": "実行コードなし。例文と確認手順をレビュー。",
+  "visualCheck": "Seven SVG covers rasterized with Quick Look and visually inspected: no clipped text or unintended overlap. Preview-only copies adjusted outer dimensions; original SVG files remain 960x600 with unchanged viewBox. Browser connection retried; available browser list empty. Desktop/mobile page rendering, search, TOC and copy interactions not tested.",
+  "limitations": [
+    "ブラウザーでの表示・操作および支援技術による確認は未実施。"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "box-sizing",
+  "reviewedOn": "2026-10-17",
+  "topicReason": "既存のGrid記事は列数、Flexbox記事は内容由来の最小幅。本記事は内側余白と枠線を含む箱の計算。 7本指定を優先して同日公開。実務の実績ではなく学習用の題材として執筆。候補web-client-workflowは講師確認済み実例がなく範囲も広いため保留。",
+  "factCheck": "本文の公式資料を開き、sourcesに記録した仕様を照合。架空の題材を明記。",
+  "codeCheck": "CSS syntax checked with clean-css; HTML parsed; width arithmetic verified: 276, 204, 292px. Browser layout not tested.",
+  "visualCheck": "Seven SVG covers rasterized with Quick Look and visually inspected: no clipped text or unintended overlap. Preview-only copies adjusted outer dimensions; original SVG files remain 960x600 with unchanged viewBox. Browser connection retried; available browser list empty. Desktop/mobile page rendering, search, TOC and copy interactions not tested.",
+  "limitations": [
+    "ブラウザーでの表示・操作および支援技術による確認は未実施。"
+  ]
+}

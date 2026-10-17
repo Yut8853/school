@@ -1,0 +1,11 @@
+{
+  "slug": "table-headers",
+  "reviewedOn": "2026-10-17",
+  "topicReason": "既存の文書見出し記事と異なり、表のデータセルと二方向の見出しの対応を扱う。 7本指定を優先して同日公開。実務の実績ではなく学習用の題材として執筆。候補web-client-workflowは講師確認済み実例がなく範囲も広いため保留。",
+  "factCheck": "本文の公式資料を開き、sourcesに記録した仕様を照合。架空の題材を明記。",
+  "codeCheck": "HTMLParser checked one caption, three col headers, two row headers, four data cells. Screen reader not tested.",
+  "visualCheck": "Seven SVG covers rasterized with Quick Look and visually inspected: no clipped text or unintended overlap. Preview-only copies adjusted outer dimensions; original SVG files remain 960x600 with unchanged viewBox. Browser connection retried; available browser list empty. Desktop/mobile page rendering, search, TOC and copy interactions not tested.",
+  "limitations": [
+    "ブラウザーでの表示・操作および支援技術による確認は未実施。"
+  ]
+}
